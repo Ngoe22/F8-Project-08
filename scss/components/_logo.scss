@@ -1,0 +1,17 @@
+.logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    //
+    &__icon {
+        width: 32px;
+        user-select: none;
+    }
+    &__title {
+        color: var(--text-color);
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.45;
+    }
+}

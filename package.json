@@ -1,0 +1,22 @@
+{
+    "name": "f8-project-08",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass scss:assets/css -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ngoe22/F8-Project-08.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/Ngoe22/F8-Project-08/issues"
+    },
+    "homepage": "https://github.com/Ngoe22/F8-Project-08#readme"
+}
