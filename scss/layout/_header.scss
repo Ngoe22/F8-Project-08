@@ -7,56 +7,98 @@
     align-items: center;
 }
 
+// @include ab.breakpoint(-) {
+//     content
+// }
+
 // -----------------------------
 
 .header {
     padding: 20px 0;
     background: var(--header-bg-color);
 
+    @include ab.breakpoint(lg) {
+        padding: 10px 0;
+    }
+
     // -- child
     &__inner {
+        position: relative;
         @extend %flexLine;
         @include ab.breakpoint(xl) {
             justify-content: space-between;
         }
     }
-
-    // .logo {
-    //     @include ab.breakpoint(lg) {
-    //         display: none;
-    //     }
-    // }
 }
 
 .top-mobileBar {
     display: none;
     @include ab.breakpoint(lg) {
         display: block;
+        //
+        img {
+            width: 20px;
+        }
     }
 }
 
 .navbar {
     margin-left: 130px;
     margin-right: auto;
-
+    //
     @include ab.breakpoint(xl) {
         margin-left: 0;
         margin-right: 0;
+    }
+    @include ab.breakpoint(lg) {
         display: none;
     }
+
     //
     &__list {
         @extend %flexLine;
     }
 
-    &__link a {
-        @extend %flexLine;
-        padding: 5px 15px;
-        gap: 6px;
-        color: var(--text-color);
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 1.46;
+    &__link {
+        > a {
+            position: relative;
+            @extend %flexLine;
+            padding: 15px;
+            gap: 6px;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.46;
+        }
+        //
+        > a::after {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            //
+            content: "";
+
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: calc(100% + var(--mega-menu-top-space));
+            translate: -50% -18px;
+            //
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-size: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            background-image: url(../../assets/icon/mega-menu-arrow.svg);
+            filter: var(--dropdown-bg-filter);
+        }
+
+        &:hover a::after {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
     &__arrow {
@@ -77,7 +119,9 @@
         background: var(--top-action-color);
         box-shadow: var(--top-action-shadow);
         //
-
+        @include ab.breakpoint(md) {
+            display: none;
+        }
         //
         &--single {
             padding: 13px;
