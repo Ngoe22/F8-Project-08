@@ -3,3 +3,32 @@
     --mega-sideMenu-width : 26% ;
     --mega-menu--height :calc(100vh - 130px);
 }
+// 
+// .drop-menu__column--side {
+//     height: calc(var(--mega-menu--height) - 60px);
+//     padding-right: 25px;
+//     overflow-y: scroll; /* better than scroll */
+// }
+
+// /* The whole scrollbar */
+// .drop-menu__column--side::-webkit-scrollbar {
+//     width: 5px; /* vertical scrollbar */
+// }
+
+// /* The track (background) */
+// .drop-menu__column--side::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+//     border-radius: 8px;
+// }
+
+// /* The draggable thumb */
+// .drop-menu__column--side::-webkit-scrollbar-thumb {
+//     background: orange;
+
+//     border-radius: 8px;
+// }
+
+// /* (Optional) hover effect */
+// .drop-menu__column--side::-webkit-scrollbar-thumb:hover {
+//     background: darkorange;
+// }

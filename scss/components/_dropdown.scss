@@ -11,6 +11,20 @@
 //     content
 // }
 
+%scroll-costume {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--drop-menu-separator--thumb);
+        border-radius: 8px;
+    }
+}
+
 // -----------------------------
 
 .navbar__link:hover .dropdown {
@@ -61,20 +75,19 @@
         z-index: 3;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        background-color: gray;
         overflow-y: scroll;
-        scrollbar-width: thin;
+        @extend %scroll-costume;
     }
     // _______________________________________________
     &__column {
         &--side {
             height: calc(var(--mega-menu--height) - 60px);
             padding-right: 25px;
-            border-right: 1px solid red;
             overflow-y: scroll;
             // scrollbar-width: thin;
-            &::-webkit-scrollbar {
-                width: 5px;
+            @extend %scroll-costume;
+            &::-webkit-scrollbar-track {
+                background: var(--drop-menu-separator);
             }
         }
     }
@@ -102,8 +115,6 @@
         &-color {
             width: 80%;
             height: 80%;
-            border-radius: 50%;
-            background-color: orange;
         }
         &-shape {
             position: absolute;
