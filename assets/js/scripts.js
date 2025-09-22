@@ -16,18 +16,12 @@ function load(selector, path) {
 
 Copy;
 
-/**
- * JS toggle
- *
- * Cách dùng:
- * <button class="js-toggle" toggle-target="#box">Click</button>
- * <div id="box">Content show/hide</div>
- */
-document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("mb-navbar-btn");
-    const item = document.getElementById("mb-navbar");
 
-    btn.addEventListener("click", () => {
-        item.classList.toggle("active");
-    });
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     const btn = document.getElementById("mb-navbar-btn");
+//     const item = document.getElementById("mb-navbar");
+
+//     btn.addEventListener("click", () => {
+//         item.classList.toggle("active");
+//     });
+// });

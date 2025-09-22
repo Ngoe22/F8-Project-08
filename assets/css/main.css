@@ -1155,6 +1155,7 @@ html.dark {
 
 .top-mobileBar {
   display: none;
+  cursor: pointer;
 }
 @media (max-width: 991.8px) {
   .top-mobileBar {

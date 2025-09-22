@@ -33,6 +33,7 @@
 
 .top-mobileBar {
     display: none;
+    cursor: pointer;
     @include ab.breakpoint(lg) {
         display: block;
         //

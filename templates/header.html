@@ -1,7 +1,7 @@
 <div class="container">
     <div class="header__inner">
         <!-- mobile -->
-        <label for="#!" class="top-mobileBar">
+        <label for="#!" class="top-mobileBar" id="mb-navbar-btn">
             <img
                 src="./assets/icon/mobile-bar.svg"
                 alt=" "
@@ -14,11 +14,11 @@
             <h1 class="logo__title">grocery mart</h1>
         </section>
         <!--  -->
-        <div class="navbar__overlay active"></div>
-        <nav class="navbar active">
+        <div class="navbar__overlay"></div>
+        <nav class="navbar" id="mb-navbar">
             <ul class="navbar__list">
                 <li class="navbar__back icon-color">
-                    <svg 
+                    <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
                         height="15"
@@ -953,7 +953,7 @@
                                                 <!-- menu content  -->
                                             </li>
                                             <li
-                                                class="drop-menu__item drop-menu__item--side "
+                                                class="drop-menu__item drop-menu__item--side"
                                             >
                                                 <a href="#!">
                                                     Clothing, Shoes &
@@ -2020,3 +2020,9 @@
         </section>
     </div>
 </div>
+
+<script>
+    document.getElementById("mb-navbar-btn").addEventListener("click", () => {
+        document.getElementById("mb-navbar").classList.toggle("active");
+    });
+</script>
