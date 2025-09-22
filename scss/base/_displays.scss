@@ -1,0 +1,25 @@
+/* display */
+$display-breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+);
+
+$display-type: (none, block, flex, grid);
+
+@each $type in $display-type {
+    .d-#{$type} {
+        display: $type !important ;
+    }
+}
+@each $point, $size in $display-breakpoints {
+    @media (max-width: $size) {
+        @each $type in $display-type {
+            .d-#{$type}-#{$point} {
+                display: $type !important ;
+            }
+        }
+    }
+}

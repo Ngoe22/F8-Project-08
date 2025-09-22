@@ -51,18 +51,79 @@
         margin-right: 0;
     }
     @include ab.breakpoint(lg) {
-        display: none;
+        display: block;
+        position: fixed;
+        inset: 0 30% 0 0;
+        padding-right: 20px;
+        background-color: var(--dropdown-bg);
+        z-index: 1;
+        overflow: auto;
+        translate: -100%;
+        transition: 0.5s;
+        //
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: var(--drop-menu-separator--thumb);
+            border-radius: 8px;
+        }
+    }
+    &.active {
+        @include ab.breakpoint(lg) {
+            translate: 0%;
+        }
+    }
+
+    @include ab.breakpoint(sm) {
+        inset: 0 10% 0 0;
+    }
+
+    &__overlay {
+        @include ab.breakpoint(lg) {
+            position: fixed;
+            inset: 0 0 0 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        &.active {
+            @include ab.breakpoint(lg) {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
     }
 
     //
     &__list {
         @extend %flexLine;
+        @include ab.breakpoint(lg) {
+            display: block;
+        }
+    }
+
+    &__back {
+        display: none;
+        padding: 15px;
+        > svg {
+            cursor: pointer;
+        }
+        @include ab.breakpoint(lg) {
+            display: block;
+        }
     }
 
     &__link {
         > a {
             position: relative;
             @extend %flexLine;
+            justify-content: space-between;
             padding: 15px;
             gap: 6px;
             color: var(--text-color);
@@ -93,6 +154,9 @@
 
             background-image: url(../../assets/icon/mega-menu-arrow.svg);
             filter: var(--dropdown-bg-filter);
+            @include ab.breakpoint(lg) {
+                content: none;
+            }
         }
 
         &:hover a::after {

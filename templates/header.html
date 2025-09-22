@@ -14,8 +14,33 @@
             <h1 class="logo__title">grocery mart</h1>
         </section>
         <!--  -->
-        <nav class="navbar">
+        <div class="navbar__overlay active"></div>
+        <nav class="navbar active">
             <ul class="navbar__list">
+                <li class="navbar__back icon-color">
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="15"
+                        viewBox="0 0 17 15"
+                        fill="none"
+                    >
+                        <path
+                            d="M1.25 7.27539L16.25 7.27539"
+                            stroke="#1A162E"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M7.2998 13.299L1.2498 7.275L7.2998 1.25"
+                            stroke="#1A162E"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </li>
                 <li class="navbar__link">
                     <a href="#!" class="navbar__link-text"
                         >Departments
@@ -33,7 +58,7 @@
                                     <div
                                         class="drop-menu__column drop-menu__column--side"
                                     >
-                                        <div class="drop-menu__title">
+                                        <div class="drop-menu__title d-none-lg">
                                             <div class="drop-menu__icon">
                                                 <img
                                                     src="./assets/icon/drop-menu-yellow.svg"
@@ -49,9 +74,16 @@
                                             All Departments
                                         </div>
                                         <ul class="drop-menu__list">
-                                            <li class="drop-menu__item">
+                                            <li
+                                                class="drop-menu__item drop-menu__item--side"
+                                            >
                                                 <a href="#!">
                                                     Savings & Featured Shops
+                                                    <img
+                                                        src="./assets/icon/arrow-down.svg"
+                                                        alt=""
+                                                        class="icon-color navbar__arrow d-none d-block-lg"
+                                                    />
                                                 </a>
                                                 <!-- menu content -->
                                                 <section
@@ -481,8 +513,17 @@
                                                 </section>
                                                 <!-- menu content  -->
                                             </li>
-                                            <li class="drop-menu__item">
-                                                <a href="#!">Electronics</a>
+                                            <li
+                                                class="drop-menu__item drop-menu__item--side"
+                                            >
+                                                <a href="#!"
+                                                    >Electronics
+                                                    <img
+                                                        src="./assets/icon/arrow-down.svg"
+                                                        alt=""
+                                                        class="icon-color navbar__arrow d-none d-block-lg"
+                                                    />
+                                                </a>
                                                 <!-- menu content -->
                                                 <section
                                                     class="drop-menu__main"
@@ -911,10 +952,18 @@
                                                 </section>
                                                 <!-- menu content  -->
                                             </li>
-                                            <li class="drop-menu__item">
+                                            <li
+                                                class="drop-menu__item drop-menu__item--side "
+                                            >
                                                 <a href="#!">
                                                     Clothing, Shoes &
                                                     Accessories
+
+                                                    <img
+                                                        src="./assets/icon/arrow-down.svg"
+                                                        alt=""
+                                                        class="icon-color navbar__arrow d-none d-block-lg"
+                                                    />
                                                 </a>
                                                 <!-- menu content -->
                                                 <section
@@ -1930,6 +1979,7 @@
                 </li>
             </ul>
         </nav>
+
         <!--  -->
         <section class="top-action">
             <div class="top-action__group top-action__group--single">

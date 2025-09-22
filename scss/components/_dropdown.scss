@@ -35,18 +35,20 @@ $side-menu-scroll-width: 5px;
 // -----------------------------
 .navbar__link:hover .dropdown {
     display: block;
-    // visibility: visible;
-    // opacity: 1;
 }
 
 .dropdown {
     display: none;
-    // opacity: 0;
-    // visibility: hidden;
-    // transition: 0.2s;
+    position: absolute;
+    @include ab.breakpoint(lg) {
+        display: block;
+        position: static;
+        padding-top: 0;
+        
+    }
+
     //
     padding-top: $mega-menu-top-space;
-    position: absolute;
     z-index: 1;
     top: 100%;
     left: 0;
@@ -58,6 +60,13 @@ $side-menu-scroll-width: 5px;
         border-radius: 20px;
         background-color: var(--dropdown-bg);
         box-shadow: var(--dropdown-shadow);
+        @include ab.breakpoint(lg) {
+            height: auto;
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: none;
+        }
     }
 
     &__inner {
@@ -72,11 +81,21 @@ $side-menu-scroll-width: 5px;
 .drop-menu {
     &__side {
         width: $mega-sideMenu-width;
-
+        @include ab.breakpoint(lg) {
+            width: 100%;
+            display: block;
+            position: static;
+        }
     }
 
     &__main {
         position: absolute;
+        @include ab.breakpoint(lg) {
+            display: block;
+            position: static;
+        }
+
+        //
         inset: 0 0 0 calc($mega-sideMenu-width - $side-menu-scroll-width);
         z-index: 3;
         display: grid;
@@ -90,12 +109,22 @@ $side-menu-scroll-width: 5px;
         visibility: hidden;
         opacity: 0;
         transition: 0.5s;
+        @include ab.breakpoint(lg) {
+            visibility: visible;
+            opacity: 1;
+        }
+
         //
         &--single {
             visibility: visible;
             opacity: 1;
             inset: 0 0 0 0;
             padding-left: 0;
+            @include ab.breakpoint(lg) {
+                padding-left: calc(
+                    $side-menu-padding-right * 0.5 + $side-menu-scroll-width
+                );
+            }
         }
     }
     &__item:hover &__main {
@@ -107,8 +136,12 @@ $side-menu-scroll-width: 5px;
     &__column {
         &--side {
             height: calc($mega-menu--height - 60px);
-
             overflow-y: scroll;
+            //
+            @include ab.breakpoint(lg) {
+                height: auto;
+                overflow: visible;
+            }
             // scrollbar-width: thin;
             @extend %scroll-costume;
             &::-webkit-scrollbar-track {
@@ -122,7 +155,6 @@ $side-menu-scroll-width: 5px;
     &__title {
         @extend %flexLine;
         gap: 14px;
-
         margin-bottom: 20px;
 
         color: var(--drop-menu-text-color);
@@ -130,6 +162,12 @@ $side-menu-scroll-width: 5px;
         line-height: 1.5; /* 150% */
         &:not(:first-child) {
             margin-top: 30px;
+            @include ab.breakpoint(lg) {
+                margin-top: 20px;
+            }
+        }
+        @include ab.breakpoint(lg) {
+            margin-top: 20px;
         }
     }
     &__icon {
@@ -152,7 +190,12 @@ $side-menu-scroll-width: 5px;
     //
     &__list {
         padding-left: 50px;
+
+        @include ab.breakpoint(lg) {
+            padding-left: 15px;
+        }
     }
+
     &__item {
         display: block;
         width: 100%;
@@ -160,19 +203,33 @@ $side-menu-scroll-width: 5px;
         color: var(--drop-menu-text-color);
         font-size: 1.4rem;
         line-height: 1.42;
-    }
-    &__item:not(:last-child) {
-        padding-bottom: 14px;
+
+        @include ab.breakpoint(lg) {
+            padding-right: 0;
+        }
     }
 
     &__item > a {
-        display: block;
+        display: flex;
+        justify-content: space-between;
         width: 100%;
         height: 100%;
+        padding-bottom: 14px;
+        @include ab.breakpoint(lg) {
+            // margin-bottom: 15px;
+            padding-right: 15px;
+        }
     }
     &__item:hover > a {
         color: var(--drop-menu-hover-text);
         text-shadow: 0 0 0.5px var(--drop-menu-hover-text);
+    }
+
+    &__item--side > a {
+        @include ab.breakpoint(lg) {
+            padding-bottom: 0px;
+            padding-top: 10px;
+        }
     }
 }
 //  _________________________
