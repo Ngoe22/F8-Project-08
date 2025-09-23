@@ -11,8 +11,13 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Gordita", sans-serif;
+    background-color: var(--main-body-bg);
 }
 
 .icon-color {
     filter: var(--icon-color);
 }
+
+// @include ab.screen(lg) {
+//
+// }

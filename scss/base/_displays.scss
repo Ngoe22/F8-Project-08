@@ -15,7 +15,7 @@ $display-type: (none, block, flex, grid);
     }
 }
 @each $point, $size in $display-breakpoints {
-    @media (max-width: $size) {
+    @media (max-width: calc($size - 0.02px)) {
         @each $type in $display-type {
             .d-#{$type}-#{$point} {
                 display: $type !important ;

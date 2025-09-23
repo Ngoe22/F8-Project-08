@@ -1,4 +1,6 @@
 html {
+    --main-body-bg: #ffffff;
+    //
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(10%) sepia(37%)
         saturate(857%) hue-rotate(210deg) brightness(89%) contrast(99%);
@@ -15,7 +17,14 @@ html {
     --drop-menu-hover-text: #0071dc;
     --drop-menu-separator: #d2d1d6;
     --drop-menu-separator--thumb: rgba(0, 0, 0, 0.3);
-    --drop-menu-text-color : #1A162E ;
-}
-// drop-menu__icon-color
+    --drop-menu-text-color: #1a162e;
 
+    //  slide-show
+    --slide-show-bar-color: #ffffff;
+
+    // category
+    --cate-item-bg: #eeeeee;
+    --cate-item-thumb-bg: white;
+    --cate-item-price-text: #000;
+    --cate-item-desc-text: #1a162e;
+}

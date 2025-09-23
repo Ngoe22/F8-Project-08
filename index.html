@@ -38,12 +38,154 @@
         <script>
             load("#header", "./templates/header.html");
         </script>
-        <!--  -->
-        <div class="container">
-            <div style="margin-top: 100px">Content</div>
+        <!-- body -->
+        <!-- slide show -->
+        <div class="home-wrap">
+            <section class="slideShow">
+                <div class="container">
+                    <div class="slideShow__inner">
+                        <!-- img 1 -->
+                        <picture class="slideShow__img">
+                            <source
+                                media="(min-width:768px)"
+                                srcset="
+                                    ./assets/img/slide-show/slide-show-1-big.png
+                                "
+                            />
+                            <source
+                                media="(min-width:0)"
+                                srcset="
+                                    ./assets/img/slide-show/slide-show-1-sm.png
+                                "
+                            />
+                            <img
+                                src="./assets/img/slide-show/slide-show-1-sm.png"
+                                alt=" "
+                            />
+                        </picture>
+                        <!-- img 1 -->
+                        <picture class="slideShow__img">
+                            <source
+                                media="(min-width:768px)"
+                                srcset="
+                                    ./assets/img/slide-show/slide-show-1-big.png
+                                "
+                            />
+                            <source
+                                media="(min-width:0)"
+                                srcset="
+                                    ./assets/img/slide-show/slide-show-1-sm.png
+                                "
+                            />
+                            <img
+                                src="./assets/img/slide-show/slide-show-1-sm.png"
+                                alt=" "
+                            />
+                        </picture>
+                        <!-- img 1 -->
+                        <picture class="slideShow__img">
+                            <source
+                                media="(min-width:768px)"
+                                srcset="
+                                    ./assets/img/slide-show/slide-show-1-big.png
+                                "
+                            />
+                            <source
+                                media="(min-width:0)"
+                                srcset="
+                                    ./assets/img/slide-show/slide-show-1-sm.png
+                                "
+                            />
+                            <img
+                                src="./assets/img/slide-show/slide-show-1-sm.png"
+                                alt=" "
+                            />
+                        </picture>
+                        <div class="slideShow__slideBar">
+                            <div class="slideShow__min">1</div>
+                            <div class="slideShow__bar"></div>
+                            <div class="slideShow__max">5</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <!--  -->
-        <footer id="footer"></footer>
+        <!-- categories -->
+        <div class="home-wrap">
+            <section class="category">
+                <div class="container">
+                    <div class="category__inner">
+                        <h2 class="home-section-title">Browse Categories</h2>
+
+                        <section class="category__list">
+                            <div class="row row-cols-3 row-cols-md-1 gx-4 gx-lg-2 gy-md-2">
+                                <div class="col">
+                                    <article class="category__item">
+                                        <div class="category__item-thumb">
+                                            <img
+                                                src="./assets/img/category/cate-item-1.png"
+                                                alt=" "
+                                                class=""
+                                            />
+                                        </div>
+                                        <div class="category__item-content">
+                                            <div class="category__item-pricing">
+                                                $24 - $150
+                                            </div>
+                                            <p class="category__item-desc">
+                                                New sumatra mandeling coffe
+                                                blend
+                                            </p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="category__item">
+                                        <div class="category__item-thumb">
+                                            <img
+                                                src="./assets/img/category/cate-item-2.png"
+                                                alt=" "
+                                                class=""
+                                            />
+                                        </div>
+                                        <div class="category__item-content">
+                                            <div class="category__item-pricing">
+                                                $37 - $160
+                                            </div>
+                                            <p class="category__item-desc">
+                                                Espresso arabica and robusta beans
+                                            </p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="category__item">
+                                        <div class="category__item-thumb">
+                                            <img
+                                                src="./assets/img/category/cate-item-3.png"
+                                                alt=" "
+                                                class=""
+                                            />
+                                        </div>
+                                        <div class="category__item-content">
+                                            <div class="category__item-pricing">
+                                                $32 - $160
+                                            </div>
+                                            <p class="category__item-desc">
+                                                Lavazza top class whole bean coffee blend
+                                            </p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- body -->
+        <footer id="footer" style="margin-top: 100px"></footer>
         <script>
             load("#footer", "./templates/footer.html");
         </script>
