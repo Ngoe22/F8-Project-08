@@ -20,34 +20,56 @@
         <!--  -->
 
         <nav class="navbar" id="navbar">
-            <ul class="navbar__list">
-                <li
-                    class="navbar__back icon-color js-toggle"
-                    toggle-target="#navbar"
+            <div
+                class="navbar__back icon-color js-toggle"
+                toggle-target="#navbar"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    height="15"
+                    viewBox="0 0 17 15"
+                    fill="none"
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="17"
-                        height="15"
-                        viewBox="0 0 17 15"
-                        fill="none"
-                    >
-                        <path
-                            d="M1.25 7.27539L16.25 7.27539"
-                            stroke="#1A162E"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                        <path
-                            d="M7.2998 13.299L1.2498 7.275L7.2998 1.25"
-                            stroke="#1A162E"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                    </svg>
-                </li>
+                    <path
+                        d="M1.25 7.27539L16.25 7.27539"
+                        stroke="#1A162E"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                    <path
+                        d="M7.2998 13.299L1.2498 7.275L7.2998 1.25"
+                        stroke="#1A162E"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </div>
+
+            <section class="mb-top-action d-none d-flex-md">
+                <a href="#!" class="mb-top-action__item">
+                    <img
+                        src="./assets/icon/cart.svg"
+                        alt=" "
+                        class="mb-top-action__icon icon-color"
+                    />
+                    <p class="mb-top-action__title">Card</p>
+                    <div class="mb-top-action__qtn">3</div>
+                </a>
+                <a href="#!" class="mb-top-action__item">
+                    <img
+                        src="./assets/icon/heart.svg"
+                        alt=" "
+                        class="mb-top-action__icon icon-color"
+                    />
+                    <p class="mb-top-action__title">Favorite</p>
+                    <div class="mb-top-action__qtn">3</div>
+                </a>
+            </section>
+
+            <ul class="navbar__list">
                 <li class="navbar__link">
                     <a href="#!" class="navbar__link-text"
                         >Departments
@@ -1986,8 +2008,7 @@
                 </li>
             </ul>
         </nav>
-        <div class="navbar__overlay js-toggle"
-            toggle-target="#navbar"></div>
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
         <!--  -->
         <section class="top-action">
             <div class="top-action__group top-action__group--single">
@@ -2020,11 +2041,13 @@
                 </button>
             </div>
 
-            <img
-                src="./assets/img/avatar.jpg"
-                alt="user"
-                class="top-action__user"
-            />
+            <a href="#!" class="top-action__user--wrap">
+                <img
+                    src="./assets/img/avatar.jpg"
+                    alt="user"
+                    class="top-action__user"
+                />
+            </a>
         </section>
     </div>
 </div>
