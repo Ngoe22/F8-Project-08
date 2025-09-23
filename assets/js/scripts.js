@@ -55,9 +55,18 @@ load("#footer", "./templates/footer.html");
 
 // 
 
-document.addEventListener("click", (e) => {
-  const target = e.target.closest(".navbar__link, .drop-menu__item--side");
-  if (!target) return; // nếu click không nằm trong 2 class kia thì bỏ qua
+document.addEventListener("click", function (e) {
+    // Nếu click vào thẻ <a> nằm trong .navbar__link
+    if (e.target.closest(".navbar__link > a")) {
+        e.preventDefault(); // ngăn load lại trang nếu <a href="#">
+        const parent = e.target.closest(".navbar__link");
+        parent.classList.toggle("active");
+    }
 
-  target.classList.toggle("active");
+    // Nếu click vào thẻ <a> nằm trong .drop-menu__item--side
+    if (e.target.closest(".drop-menu__item--side > a")) {
+        e.preventDefault();
+        const parent = e.target.closest(".drop-menu__item--side");
+        parent.classList.toggle("active");
+    }
 });
