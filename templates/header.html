@@ -1,23 +1,30 @@
 <div class="container">
     <div class="header__inner">
         <!-- mobile -->
-        <label for="#!" class="top-mobileBar" id="mb-navbar-btn">
+        <button
+            class="top-mobileBar js-toggle"
+            toggle-target="#navbar"
+            id="mb-navbar-btn"
+        >
             <img
                 src="./assets/icon/mobile-bar.svg"
                 alt=" "
                 class="icon-color"
             />
-        </label>
+        </button>
         <!--  -->
         <section class="logo">
             <img src="./assets/icon/main-logo.svg" alt=" " class="logo__icon" />
             <h1 class="logo__title">grocery mart</h1>
         </section>
         <!--  -->
-        <div class="navbar__overlay"></div>
-        <nav class="navbar" id="mb-navbar">
+
+        <nav class="navbar" id="navbar">
             <ul class="navbar__list">
-                <li class="navbar__back icon-color">
+                <li
+                    class="navbar__back icon-color js-toggle"
+                    toggle-target="#navbar"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -1979,7 +1986,8 @@
                 </li>
             </ul>
         </nav>
-
+        <div class="navbar__overlay js-toggle"
+            toggle-target="#navbar"></div>
         <!--  -->
         <section class="top-action">
             <div class="top-action__group top-action__group--single">
@@ -2020,9 +2028,3 @@
         </section>
     </div>
 </div>
-
-<script>
-    document.getElementById("mb-navbar-btn").addEventListener("click", () => {
-        document.getElementById("mb-navbar").classList.toggle("active");
-    });
-</script>

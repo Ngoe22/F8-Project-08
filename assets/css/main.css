@@ -1152,6 +1152,15 @@ html.dark {
     justify-content: space-between;
   }
 }
+@media (max-width: 991.8px) {
+  .header .navbar__arrow {
+    rotate: -90deg;
+    transition: 0.5s;
+  }
+  .header li.active > a > .navbar__arrow {
+    rotate: 0deg;
+  }
+}
 
 .top-mobileBar {
   display: none;
@@ -1183,8 +1192,8 @@ html.dark {
     inset: 0 30% 0 0;
     padding-right: 20px;
     background-color: var(--dropdown-bg);
-    z-index: 1;
-    overflow: auto;
+    z-index: 10;
+    overflow: scroll;
     translate: -100%;
     transition: 0.5s;
   }
@@ -1214,17 +1223,16 @@ html.dark {
   .navbar__overlay {
     position: fixed;
     inset: 0 0 0 0;
+    z-index: 9;
     background-color: rgba(0, 0, 0, 0.3);
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
   }
 }
-@media (max-width: 991.8px) {
-  .navbar__overlay.active {
-    visibility: visible;
-    opacity: 1;
-  }
+.navbar.active ~ .navbar__overlay {
+  visibility: visible;
+  opacity: 1;
 }
 @media (max-width: 991.8px) {
   .navbar__list {
@@ -1252,6 +1260,12 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.46;
+}
+@media (max-width: 991.8px) {
+  .navbar__link > a {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
 }
 .navbar__link > a::after {
   opacity: 0;
@@ -1370,6 +1384,14 @@ html.dark {
   display: block;
 }
 
+@media (max-width: 991.8px) {
+  .navbar__link:hover .dropdown {
+    display: none;
+  }
+  .navbar__link.active .dropdown {
+    display: block;
+  }
+}
 .dropdown {
   display: none;
   position: absolute;
@@ -1381,7 +1403,6 @@ html.dark {
 }
 @media (max-width: 991.8px) {
   .dropdown {
-    display: block;
     position: static;
     padding-top: 0;
   }
@@ -1433,7 +1454,7 @@ html.dark {
 }
 @media (max-width: 991.8px) {
   .drop-menu__main {
-    display: block;
+    display: none;
     position: static;
   }
 }
@@ -1452,6 +1473,7 @@ html.dark {
 @media (max-width: 991.8px) {
   .drop-menu__main--single {
     padding-left: 30px;
+    display: block;
   }
 }
 .drop-menu__item:hover .drop-menu__main {
@@ -1537,7 +1559,7 @@ html.dark {
 }
 @media (max-width: 991.8px) {
   .drop-menu__item > a {
-    padding-right: 15px;
+    padding-right: 35px;
   }
 }
 .drop-menu__item:hover > a {
@@ -1548,6 +1570,12 @@ html.dark {
   .drop-menu__item--side > a {
     padding-bottom: 0px;
     padding-top: 10px;
+  }
+}
+
+@media (max-width: 991.8px) {
+  .drop-menu__item--side.active > .drop-menu__main {
+    display: block;
   }
 }
 
