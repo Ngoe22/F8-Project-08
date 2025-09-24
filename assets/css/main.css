@@ -1,20 +1,3 @@
-button,
-input,
-textarea,
-select,
-a {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  padding: 0 0;
-  border: 0;
-  margin: 0;
-  outline: none;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-  background-color: transparent;
-}
-
 /*  */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -149,6 +132,27 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button,
+input,
+textarea,
+select,
+a {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0 0;
+  border: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
 }
 
 *,
@@ -1298,7 +1302,7 @@ body {
 }
 
 html {
-  --main-body-bg: #ffffff;
+  --main-body-bg: #f6f6f6;
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(10%) sepia(37%)
       saturate(857%) hue-rotate(210deg) brightness(89%) contrast(99%);
@@ -1319,6 +1323,11 @@ html {
   --cate-item-thumb-bg: white;
   --cate-item-price-text: #000;
   --cate-item-desc-text: #1a162e;
+  --product-filter-bg: #ffffff;
+  --product-filter-text: #6c6c72;
+  --product-favBtn-bg: #ffffff;
+  --product-favBtn-shadow: 0 20px 60px 5px rgba(124, 124, 124, 0.25);
+  --product-item-desc-text: #9e9da8;
 }
 
 html.dark {
@@ -1343,6 +1352,11 @@ html.dark {
   --cate-item-thumb-bg: #292e39;
   --cate-item-price-text: #ffffff;
   --cate-item-desc-text: #ffffff;
+  --product-filter-bg: #171c28;
+  --product-filter-text: #ffffff;
+  --product-favBtn-bg: #292e39;
+  --product-favBtn-shadow: 0 20px 60px 5px rgba(124, 124, 124, 0.15);
+  --product-item-desc-text: #9e9da8;
 }
 
 .top-action__btn, .top-action__group, .top-action, .navbar__link > a, .navbar__list, .header__inner {
@@ -1924,7 +1938,7 @@ html.dark {
 @media (max-width: 1199.8px) {
   .category__item-thumb {
     width: 100%;
-    height: 160px;
+    height: 130px;
   }
 }
 @media (max-width: 767.8px) {
@@ -1936,6 +1950,7 @@ html.dark {
 }
 .category__item-thumb img {
   object-fit: contain;
+  object-position: center;
   width: 100%;
   height: 100%;
   border-radius: inherit;
@@ -1950,6 +1965,98 @@ html.dark {
 .category__item-desc {
   color: var(--cate-item-desc-text, #1a162e);
   line-height: 1.5;
+}
+
+.product__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.product__filter {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 6px;
+  gap: 14px;
+  background-color: var(--product-filter-bg);
+  color: var(--product-filter-text);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+.product__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  padding-bottom: 25px;
+  border-radius: 20px;
+  background-color: var(--product-filter-bg);
+}
+.product__item-thumb {
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+.product__item-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.product__item-favBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--product-favBtn-bg);
+  box-shadow: var(--product-favBtn-shadow);
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+}
+.product__item-favBtn-icon {
+  width: 50%;
+  height: 50%;
+  background-image: url(../../assets/icon/heart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.product__item-favBtn.active .product__item-favBtn-icon {
+  filter: none;
+  background-image: url(../../assets/icon/heart-red.svg);
+}
+.product__item-title {
+  color: var(--text-color, #1a162e);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.product__item-desc {
+  margin-top: auto;
+  color: var(--product-item-desc-text, #9e9da8);
+  font-size: 1.5rem;
+  line-height: 1.46;
+}
+.product__item-bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--Secondary-Color-Secondary-1, #1a162e);
+  /* Medium 16 */
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 1;
+}
+.product__item-rate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /*# sourceMappingURL=main.css.map */

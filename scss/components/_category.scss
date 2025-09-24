@@ -37,7 +37,7 @@
 
             @include ab.screen(xl) {
                 width: 100%;
-                height: 160px;
+                height: 130px;
             }
 
             @include ab.screen(md) {
@@ -48,6 +48,7 @@
 
             img {
                 object-fit: contain;
+                object-position: center;
                 width: 100%;
                 height: 100%;
                 border-radius: inherit;

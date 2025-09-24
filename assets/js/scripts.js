@@ -52,8 +52,7 @@ window.addEventListener("template-loaded", (e) => {
 load("#header", "./templates/header.html");
 load("#footer", "./templates/footer.html");
 
-
-// 
+//
 
 document.addEventListener("click", function (e) {
     // Nếu click vào thẻ <a> nằm trong .navbar__link
@@ -67,6 +66,13 @@ document.addEventListener("click", function (e) {
     if (e.target.closest(".drop-menu__item--side > a")) {
         e.preventDefault();
         const parent = e.target.closest(".drop-menu__item--side");
+        parent.classList.toggle("active");
+    }
+
+    //
+    if (e.target.closest(".product__item-favBtn")) {
+        e.preventDefault();
+        const parent = e.target.closest(".product__item-favBtn");
         parent.classList.toggle("active");
     }
 });

@@ -1,0 +1,107 @@
+.product {
+    //
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__filter {
+        display: flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 6px;
+        gap: 14px;
+        background-color: var(--product-filter-bg);
+        //
+        color: var(--product-filter-text);
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.42;
+    }
+
+    &__item {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        padding-bottom: 25px;
+        border-radius: 20px;
+        background-color: var(--product-filter-bg);
+        //
+        &-thumb {
+            position: relative;
+            height: 250px;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+        &-favBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--product-favBtn-bg);
+            box-shadow: var(--product-favBtn-shadow);
+            position: absolute;
+            z-index: 2;
+            bottom: 0;
+            right: 0;
+
+            &-icon {
+                width: 50%;
+                height: 50%;
+                background-image: url(../../assets/icon/heart.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &.active &-icon {
+                filter: none;
+                background-image: url(../../assets/icon/heart-red.svg);
+                
+            }
+        }
+
+        &-title {
+            color: var(--text-color, #1a162e);
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        &-desc {
+            margin-top: auto;
+            color: var(--product-item-desc-text, #9e9da8);
+            font-size: 1.5rem;
+            line-height: 1.46;
+        }
+
+        &-bot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            //
+            color: var(--Secondary-Color-Secondary-1, #1a162e);
+
+            /* Medium 16 */
+            color: var(--text-color);
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        &-rate {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    }
+}

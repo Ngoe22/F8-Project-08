@@ -1,5 +1,5 @@
 html {
-    --main-body-bg: #ffffff;
+    --main-body-bg: #f6f6f6;
     //
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(10%) sepia(37%)
@@ -27,4 +27,12 @@ html {
     --cate-item-thumb-bg: white;
     --cate-item-price-text: #000;
     --cate-item-desc-text: #1a162e;
+
+    // product
+    --product-filter-bg: #ffffff;
+    --product-filter-text: #6c6c72;
+    --product-favBtn-bg: #ffffff;
+    --product-favBtn-shadow: 0 20px 60px 5px rgba(124, 124, 124, 0.25);
+    --product-item-desc-text: #9e9da8;
+
 }
