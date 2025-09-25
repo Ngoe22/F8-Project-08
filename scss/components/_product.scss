@@ -1,3 +1,9 @@
+@use "../abstracts" as ab;
+
+// _______________________________________________
+// @include ab.screen(lg) {
+// }
+
 .product {
     //
     &__top {
@@ -22,14 +28,26 @@
             font-size: 1.4rem;
             font-weight: 700;
             line-height: 1.42;
+            cursor: pointer;
         }
 
         //
+
         &-board {
+            display: none;
             position: absolute;
             inset: 99% 0 auto;
             padding-top: 20px;
             z-index: 1;
+            @include ab.screen(lg) {
+                inset: 99% 0 auto 30%;
+            }
+            @include ab.screen(md) {
+                inset: 99% 0 auto 20%;
+            }
+        }
+        &:hover &-board {
+            display: block;
         }
     }
 

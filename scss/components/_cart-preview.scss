@@ -1,0 +1,103 @@
+%flexSpb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-preview {
+    box-shadow: 0 40px 90px 20px rgba(23, 28, 40, 0.4);
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    width: 585px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--cart-preview-bg);
+    //
+    &__separator {
+        width: 100%;
+        height: 1px;
+        background-color: var(--cart-preview-separate-line);
+    }
+
+    &__top {
+        @extend %flexSpb;
+        font-size: 2rem;
+        line-height: 1.45rem;
+    }
+
+    &__header {
+        color: var(--cart-preview-text-color, #1a162e);
+        font-weight: 500;
+    }
+
+    &__linkPage {
+        color: var(--cart-preview-link, #0071dc);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+    }
+
+    &__item {
+        color: var(--cart-preview-text-color, #1a162e);
+        //
+
+        &-thumb {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        &-name {
+            font-size: 1.4rem;
+            line-height: 1.42;
+            margin-top: 14px;
+        }
+        &-price {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.46;
+            margin-top: 5px;
+        }
+    }
+
+    &__calc {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &-line {
+            @extend %flexSpb;
+            color: var(--cart-preview-text-color, #1a162e);
+            font-size: 1.8rem;
+            line-height: 1.45;
+            //
+            &--bold {
+                font-size: 2.1rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__checkout {
+        width: fit-content;
+        padding: 18px 40px;
+        border-radius: 999px;
+        margin-left: auto;
+        background-color: var(--cart-preview-checkout-btn);
+
+        color: var(--cart-preview-checkout-text, #1a162e);
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.45rem;
+
+        transition: 0.5s;
+        &:hover {
+            color: white;
+        }
+    }
+}

@@ -216,7 +216,7 @@
 .top-action {
     @extend %flexLine;
     gap: 20px;
-
+    position: relative;
     //
     &__group {
         @extend %flexLine;
@@ -266,4 +266,20 @@
         object-fit: cover;
         cursor: pointer;
     }
+
+    &__preview-cart {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        padding-top: 40px;
+        z-index: 1;
+    }
+
+
 }
+
+.top-action__preview-hover:hover .top-action__preview-cart {
+    display: block;
+}
+
