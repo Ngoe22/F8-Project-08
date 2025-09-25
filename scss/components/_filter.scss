@@ -45,8 +45,8 @@
 
     &__separator {
         align-self: stretch;
-        width: 2px;
-        background-color: #eee;
+        width: 1px;
+        background-color: var(--filter__price-line);
         margin: 0 14px;
 
         &--rotate {

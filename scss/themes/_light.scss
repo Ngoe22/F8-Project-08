@@ -48,6 +48,19 @@ html {
     --cart-preview-bg: #ffffff;
     --cart-preview-separate-line: #d2d1d6;
     --cart-preview-checkout-btn: #ffb700;
-    --cart-preview-checkout-text : #1a162e ;
+    --cart-preview-checkout-text: #1a162e;
     --cart-preview-link: #0071dc;
+
+    // page path
+    --page-path-bg: #ebebeb;
+    --page-path-arrow: brightness(0) saturate(100%) invert(69%) sepia(6%)
+        saturate(363%) hue-rotate(206deg) brightness(90%) contrast(95%);
+    --page-path-text: #9e9da8;
+    --page-path-active-text: #1a162e;
+
+    // production
+    --production-content-bg: #f1f1f1;
+    --production-text: #1a162e;
+    --production-discount-text: #67b044;
+    --production-cta-bg: #ffb700;
 }

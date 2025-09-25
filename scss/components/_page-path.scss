@@ -1,0 +1,32 @@
+.page-path {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--page-path-bg);
+    //
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--page-path-text, #9e9da8);
+        font-weight: 500;
+        line-height: 1.5;
+
+        //
+        img {
+            filter: var(--page-path-arrow);
+            width: 10px;
+        }
+
+        &--onsite {
+            font-weight: 500;
+            color: var(--page-path-active-text);
+            //
+            img {
+                display: none;
+            }
+        }
+    }
+}

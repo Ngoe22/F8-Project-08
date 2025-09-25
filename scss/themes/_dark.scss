@@ -50,4 +50,11 @@ html.dark {
     --cart-preview-checkout-btn: #ffb700;
     --cart-preview-checkout-text: #1a162e;
     --cart-preview-link: #0071dc;
+
+    // page path
+    --page-path-bg: #171C28;
+    --page-path-arrow: brightness(0) saturate(100%) invert(69%) sepia(6%)
+        saturate(363%) hue-rotate(206deg) brightness(90%) contrast(95%);
+    --page-path-text: #9e9da8;
+    --page-path-active-text: #FFFFFF;
 }

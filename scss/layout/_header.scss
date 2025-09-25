@@ -268,18 +268,18 @@
     }
 
     &__preview-cart {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
         position: absolute;
         top: 50%;
         right: 0;
         padding-top: 40px;
         z-index: 1;
+        transition: 0.5s;
     }
-
-
 }
 
 .top-action__preview-hover:hover .top-action__preview-cart {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
-

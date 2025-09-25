@@ -34,7 +34,11 @@
         //
 
         &-board {
-            display: none;
+            // display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+            //
             position: absolute;
             inset: 99% 0 auto;
             padding-top: 20px;
@@ -47,7 +51,9 @@
             }
         }
         &:hover &-board {
-            display: block;
+            // display: block;
+            visibility: visible;
+            opacity: 1;
         }
     }
 
