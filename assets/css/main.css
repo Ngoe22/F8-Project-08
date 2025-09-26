@@ -2493,6 +2493,10 @@ html.dark {
   align-items: center;
   gap: 10px;
 }
+.production__rate-star {
+  display: block;
+  margin-bottom: 2px;
+}
 .production__rate-stat {
   display: inline-block;
   color: var(--production-text);

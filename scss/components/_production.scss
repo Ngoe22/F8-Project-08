@@ -25,6 +25,11 @@
         align-items: center;
         gap: 10px;
 
+        &-star {
+            display: block;
+            margin-bottom: 2px;
+        }
+
         &-stat {
             display: inline-block;
             // padding-top: 1px;
