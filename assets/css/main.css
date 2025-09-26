@@ -2442,8 +2442,10 @@ html.dark {
   margin-bottom: 30px;
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .production__rate-stat {
+  display: inline-block;
   color: var(--production-text);
   font-size: 1.8rem;
   font-weight: 500;

@@ -23,8 +23,11 @@
         margin-bottom: 30px;
         display: flex;
         align-items: center;
+        gap: 10px;
 
         &-stat {
+            display: inline-block;
+            // padding-top: 1px;
             color: var(--production-text);
             font-size: 1.8rem;
             font-weight: 500;
