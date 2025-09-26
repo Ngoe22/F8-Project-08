@@ -52,9 +52,18 @@ html.dark {
     --cart-preview-link: #0071dc;
 
     // page path
-    --page-path-bg: #171C28;
+    --page-path-bg: #171c28;
     --page-path-arrow: brightness(0) saturate(100%) invert(69%) sepia(6%)
         saturate(363%) hue-rotate(206deg) brightness(90%) contrast(95%);
     --page-path-text: #9e9da8;
-    --page-path-active-text: #FFFFFF;
+    --page-path-active-text: #ffffff;
+
+    // production
+    --production-content-bg: #171c28;
+    --production-text: #eeeeee;
+    --production-discount-text: #67b044;
+    --production-cta-bg: #ffb700;
+    --production-shipping-text: #eeeeee;
+    --production-price-text: #eeeeee;
+    --production-price-cta-text: #000000;
 }

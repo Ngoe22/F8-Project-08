@@ -62,5 +62,15 @@ html {
     --production-content-bg: #f1f1f1;
     --production-text: #1a162e;
     --production-discount-text: #67b044;
+    --production-discount-bg: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.8) 100%
+        ),
+        #67b044;
     --production-cta-bg: #ffb700;
+    --production-shipping-text: #1a162e;
+    --production-price-border: #b9babe;
+    --production-price-text: #000000;
+    --production-price-cta-text: #000000;
 }

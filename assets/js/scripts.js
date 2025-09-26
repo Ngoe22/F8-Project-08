@@ -75,4 +75,10 @@ document.addEventListener("click", function (e) {
         const parent = e.target.closest(".product__item-favBtn");
         parent.classList.toggle("active");
     }
+
+    if (e.target.closest(".fav-add")) {
+        e.preventDefault();
+        const parent = e.target.closest(".fav-add");
+        parent.classList.toggle("active");
+    }
 });
