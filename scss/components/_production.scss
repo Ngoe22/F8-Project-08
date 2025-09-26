@@ -128,4 +128,23 @@
             border: 1px solid var(--production-price-border);
         }
     }
+
+    &__tabs {
+        display: flex;
+        column-gap: 60px;
+        row-gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__tab {
+        flex-shrink: 0;
+        color: var(--production-tabs-text);
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.45;
+
+        &.active {
+            color: var(--production-tabs-active-text);
+        }
+    }
 }
