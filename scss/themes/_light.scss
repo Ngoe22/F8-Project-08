@@ -77,8 +77,18 @@ html {
     --production-tabs-text: #9e9da8;
     --production-tabs-active-text: #1a162e;
 
-    // review 
+    // review
+    --review-item-bg: #fafafd;
 
-    --review-item-bg :#FAFAFD ;
+    // user nav
+    --user-nav-header-text: #ffffff;
+    --user-nav-avatar-border: 5px solid rgba(255, 255, 255, 0.2);
+    --user-nav-list-text: #1a162e;
+    --user-nav-body-bg: #ffffff;
+    --user-nav-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.4);
 
+    //  user page
+    --user-page-text: #1a162e;
+    --user-page-main-bg: #ffffff;
+    --user-page-main-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.9);
 }
