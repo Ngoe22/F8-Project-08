@@ -1369,6 +1369,14 @@ html {
   --user-page-text: #1a162e;
   --user-page-main-bg: #ffffff;
   --user-page-main-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.9);
+  --user-card-border: #d2d1d6;
+  --user-info-item-bg: #f6f6f6;
+  --user-info-item-icon-bg: #ffffff;
+  --user-info-item-text: #1a162e;
+  --user-list-text: #1a162e;
+  --user-list-border: #d2d1d6;
+  --user-list-action-text: #1a162e;
+  --user-list-action-bg: #ffb700;
 }
 
 html.dark {
@@ -1427,8 +1435,15 @@ html.dark {
   --user-nav-header-text: #ffffff;
   --user-nav-avatar-border: 5px solid rgba(255, 255, 255, 0.2);
   --user-nav-list-text: #b9babe;
-  --user-nav-body-bg: #171C28;
-  --user-nav-shadow: 0 20px 60px 10px rgba(23, 28, 40, 0.20);
+  --user-nav-body-bg: #171c28;
+  --user-nav-shadow: 0 20px 60px 10px rgba(23, 28, 40, 0.2);
+  --user-page-text: #b9babe;
+  --user-page-main-bg: #171c28;
+  --user-page-main-shadow: 0 20px 60px 10px rgba(23, 28, 40, 0.2);
+  --user-card-border: #B9BABE;
+  --user-info-item-bg: #292e39;
+  --user-info-item-icon-bg: #171c28;
+  --user-info-item-text: #b9babe;
 }
 
 .top-action__btn, .top-action__group, .top-action, .navbar__link > a, .navbar__list, .header__inner {
@@ -1718,9 +1733,13 @@ html.dark {
 }
 
 .user-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   padding: 30px;
   border-radius: 20px;
   box-shadow: var(--user-page-main-shadow);
+  background-color: var(--user-page-main-bg);
 }
 
 .logo {
@@ -2678,6 +2697,7 @@ html.dark {
 .user-nav {
   border-radius: 20px;
   box-shadow: var(--user-nav-shadow);
+  margin-bottom: 20px;
 }
 .user-nav__header {
   border-top-left-radius: inherit;
@@ -2762,15 +2782,129 @@ html.dark {
   flex-wrap: wrap;
   gap: 30px;
 }
+@media (max-width: 767.8px) {
+  .user-card {
+    gap: 15px;
+  }
+}
 .user-card__img {
   display: block;
   height: 170px;
   width: 280px;
+  border-radius: 10px;
 }
-.user-card__img > img {
+.user-card__img--added {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  border-radius: inherit;
+}
+.user-card__img--add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px dashed var(--user-card-border);
+  color: var(--user-card-border);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 767.8px) {
+  .user-info {
+    grid-template-columns: 1fr;
+  }
+}
+.user-info__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--user-info-item-bg);
+  color: var(--user-info-item-text);
+  line-height: 1.46;
+}
+.user-info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  grid-row: span 2;
+  border-radius: 8px;
+  background-color: var(--user-info-item-icon-bg);
+}
+.user-info__icon > img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  object-position: center;
+}
+.user-info__label {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.user-info__info {
+  font-size: 1.4rem;
+}
+
+.user-list__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+}
+.user-list__item:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--user-list-border);
+  margin-bottom: 20px;
+}
+.user-list__item-img {
+  grid-row: span 2;
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+}
+@media (max-width: 575.8px) {
+  .user-list__item-img {
+    width: 110px;
+    height: 80px;
+  }
+}
+.user-list__item-title {
+  color: var(--user-list-text);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46;
+}
+.user-list__item-action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.user-list__item-price {
+  color: var(--user-list-text);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.user-list__item-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background-color: var(--user-list-action-bg);
+  color: var(--user-list-action-text);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46;
 }
 
 /*# sourceMappingURL=main.css.map */

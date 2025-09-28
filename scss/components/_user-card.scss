@@ -1,18 +1,39 @@
+@use "../abstracts" as ab;
+
 .user-card {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    @include ab.screen(md) {
+        gap: 15px;
+    }
 
     &__img {
         display: block;
         height: 170px;
         width: 280px;
+        border-radius: 10px;
 
-        > img {
+        &--added {
             height: 100%;
             width: 100%;
             object-fit: contain;
+            border-radius: inherit;
+        }
+
+        &--add {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            border: 1px dashed var(--user-card-border);
+            color: var(--user-card-border);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.42;
         }
     }
 }

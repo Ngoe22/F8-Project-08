@@ -1,6 +1,7 @@
 .user-nav {
     border-radius: 20px;
     box-shadow: var(--user-nav-shadow);
+    margin-bottom: 20px;
 
     //
     &__header {
@@ -84,8 +85,8 @@
             object-position: center;
         }
         &-label {
-            flex: 1;  
-            transition: .5s;
+            flex: 1;
+            transition: 0.5s;
             &:hover {
                 color: var(--drop-menu-hover-text);
                 translate: 5px;

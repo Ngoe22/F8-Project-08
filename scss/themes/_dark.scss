@@ -77,10 +77,19 @@ html.dark {
     --user-nav-header-text: #ffffff;
     --user-nav-avatar-border: 5px solid rgba(255, 255, 255, 0.2);
     --user-nav-list-text: #b9babe;
-    --user-nav-body-bg: #171C28;
-    --user-nav-shadow : 0 20px 60px 10px rgba(23, 28, 40, 0.20);
+    --user-nav-body-bg: #171c28;
+    --user-nav-shadow: 0 20px 60px 10px rgba(23, 28, 40, 0.2);
 
     //  user page
+    --user-page-text: #b9babe;
+    --user-page-main-bg: #171c28;
+    --user-page-main-shadow: 0 20px 60px 10px rgba(23, 28, 40, 0.2);
 
+    //user card
+    --user-card-border: #B9BABE;
 
+    // user info
+    --user-info-item-bg: #292e39;
+    --user-info-item-icon-bg: #171c28;
+    --user-info-item-text: #b9babe;
 }
