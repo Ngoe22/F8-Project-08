@@ -1,4 +1,9 @@
+@use "../abstracts" as ab;
+
 .common-page-wrap {
     margin-top: 30px;
-}
 
+    @include ab.screen(md) {
+        margin-top: 20px;
+    }
+}

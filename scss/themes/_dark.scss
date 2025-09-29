@@ -86,10 +86,33 @@ html.dark {
     --user-page-main-shadow: 0 20px 60px 10px rgba(23, 28, 40, 0.2);
 
     //user card
-    --user-card-border: #B9BABE;
+    --user-card-border: #b9babe;
 
     // user info
     --user-info-item-bg: #292e39;
     --user-info-item-icon-bg: #171c28;
     --user-info-item-text: #b9babe;
+
+    // user-item
+    --user-list-text: #b9babe;
+    --user-list-border: #d2d1d6;
+    --user-list-action-text: #1a162e;
+    --user-list-action-bg: #ffb700;
+
+    // user modified
+    --user-mod-place-holder: #d2d1d6;
+    --user-mod-border: #292e39;
+    --user-mod-text: #b9babe;
+    --user-mod-btn-text: #1a162e;
+    --user-mod-btn-bg: #ffb700;
+
+    // check out
+    --check-out-dark-to-gray: #b9babe; //
+    --check-out-action-text: #9e9da8;
+    --check-out-action-filter: brightness(0) saturate(100%) invert(85%) sepia(1%) saturate(3812%) hue-rotate(213deg) brightness(77%) contrast(79%);
+    --check-out-calc-minor-text: #9e9da8;
+    --check-out-D2D1D6-to-292E39: #292E39;
+    --check-out-dark-to-gray-filter: brightness(0) saturate(100%) invert(87%)
+        sepia(0%) saturate(718%) hue-rotate(263deg) brightness(86%)
+        contrast(90%);
 }

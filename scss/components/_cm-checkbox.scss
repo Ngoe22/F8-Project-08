@@ -1,0 +1,36 @@
+.cm-checkbox {
+    $border-color: #9e9da8;
+    $bg-color: #67b044;
+
+    display: flex;
+    align-items: center;
+    &__box {
+        $size: 20px;
+        width: $size;
+        height: $size;
+
+        border-radius: 5px;
+        border: 1.5px solid $border-color;
+
+        &::after {
+            flex-shrink: 0;
+            content: "";
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-image: url(../icon/checked.svg);
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    input:checked ~ &__box {
+        background-color: $bg-color;
+        border-color: $bg-color;
+
+        &::after {
+            display: block;
+        }
+    }
+}

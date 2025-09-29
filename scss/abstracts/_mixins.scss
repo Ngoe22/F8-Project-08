@@ -20,3 +20,17 @@ $grid-breakpoints: (
         @error "Invalid parameter: #{$key}";
     }
 }
+
+@mixin common-btn(
+    $padding-y: 0,
+    $padding-x: 0,
+    $border-r: 999px,
+    $text-color: #1a162e
+) {
+    display: inline-flex;
+    align-items: center;
+    padding: $padding-y $padding-x;
+    border-radius: $border-r;
+    background-color: #ffb700;
+    color: $text-color;
+}

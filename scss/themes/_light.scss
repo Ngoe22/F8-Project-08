@@ -8,6 +8,7 @@ html {
     --top-action-color: white;
     --top-action-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.3);
     --top-separator: #ededf6;
+    --active-green: #67b044;
 
     //  dropdown
     --dropdown-bg: #ffffff;
@@ -90,7 +91,7 @@ html {
     //  user page
     --user-page-text: #1a162e;
     --user-page-main-bg: #ffffff;
-    --user-page-main-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.9);
+    --user-page-main-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.4);
 
     //user card
     --user-card-border: #d2d1d6;
@@ -105,4 +106,23 @@ html {
     --user-list-border: #d2d1d6;
     --user-list-action-text: #1a162e;
     --user-list-action-bg: #ffb700;
+
+    // user modified
+    --user-mod-place-holder: #d2d1d6;
+    --user-mod-border: #d2d1d6; // 292E39 ;
+    --user-mod-text: #1a162e; //  #B9BABE
+    --user-mod-btn-text: #1a162e;
+    --user-mod-btn-bg: #ffb700;
+
+    // check out
+    --check-out-dark-to-gray: #1a162e; // #B9BABE
+    --check-out-action-text: #9e9da8;
+    --check-out-action-filter: brightness(0) saturate(100%) invert(85%)
+        sepia(1%) saturate(3812%) hue-rotate(213deg) brightness(77%)
+        contrast(79%);
+    --check-out-minor-calc-text: #1a162e;
+    --check-out-D2D1D6-to-292E39: #d2d1d6;
+    --check-out-dark-to-gray-filter: brightness(0) saturate(100%) invert(6%)
+        sepia(23%) saturate(4962%) hue-rotate(233deg) brightness(88%)
+        contrast(92%);
 }

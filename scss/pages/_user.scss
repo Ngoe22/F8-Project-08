@@ -1,3 +1,5 @@
+@use "../abstracts" as ab;
+
 .user-main-section-header {
     color: var(--user-page-text);
 
@@ -20,6 +22,34 @@
     gap: 30px;
     padding: 30px;
     border-radius: 20px;
+
+    @include ab.screen(sm) {
+        gap: 16px;
+        padding: 16px;
+    }
+
     box-shadow: var(--user-page-main-shadow);
     background-color: var(--user-page-main-bg);
+
+    &__back-btn {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        color: var(--text-color);
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.45;
+        &::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url(../icon/arrow-left.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: var(--icon-color);
+        }
+    }
 }

@@ -1,0 +1,108 @@
+@use "../abstracts" as ab;
+
+.user-mod {
+    &-search-bar {
+        &::placeholder {
+            color: var(--user-mod-place-holder);
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.44; /* 144.444% */
+        }
+
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        color: var(--text-color);
+        padding: 16px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        background-color: var(--user-page-main-bg);
+        box-shadow: var(--user-page-main-shadow);
+
+        @include ab.screen(md) {
+            display: flex;
+        }
+
+        &__input {
+            flex-grow: 1;
+        }
+        &__icon {
+            display: block;
+            height: 24px;
+            width: 24px;
+            background-image: url(../icon/search.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: var(--icon-color);
+        }
+    }
+
+    //
+}
+
+.user-mod {
+    *::placeholder {
+        color: var(--user-mod-place-holder);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+    //
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    @include ab.screen(md) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    &__block {
+        color: var(--user-mod-text);
+        font-weight: 500;
+        line-height: 1.44;
+    }
+    &__label {
+        font-size: 1.8rem;
+    }
+    &__input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid var(--user-mod-border);
+        margin-top: 20px;
+        font-size: 1.8rem;
+
+        @include ab.screen(md) {
+            margin-top: 12px;
+        }
+    }
+
+    &__checkbox {
+        margin-top: 12px;
+        &-text {
+            display: block;
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__submit-line {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 30px;
+    }
+
+    &__cancel-btn {
+        color: var(--user-mod-text);
+        font-weight: 500;
+    }
+
+    &__submit-btn {
+        @include ab.common-btn(10px, 20px);
+        font-weight: 500;
+    }
+}
