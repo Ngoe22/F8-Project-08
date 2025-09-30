@@ -41,6 +41,19 @@
         <!-- body -->
         <div class="common-page-wrap">
             <div class="container">
+                <form action="#!" class="user-mod-search-bar">
+                    <input
+                        type="text"
+                        class="user-mod-search-bar__input"
+                        placeholder="Search for item"
+                    />
+                    <button class="user-mod-search-bar__icon"></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="common-page-wrap">
+            <div class="container">
                 <div class="page-path">
                     <div class="page-path__item">
                         Home
@@ -355,7 +368,7 @@
                                 <div class="check-out__bot">
                                     <a
                                         href="./checkout.html"
-                                        class="check-out__back d-none-md"
+                                        class="check-out__back"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -374,7 +387,9 @@
                                         </svg>
                                         Continue Checkout
                                     </a>
-                                    <a href="#!" class="shipping__btn-next"
+                                    <a
+                                        href="#!"
+                                        class="shipping__btn-next d-block d-none-lg"
                                         >Continue</a
                                     >
                                 </div>
@@ -411,6 +426,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <a
+                                href="#!"
+                                class="side-calc__btn d-none d-block-lg"
+                            >
+                                Continue
+                            </a>
                         </div>
                     </div>
                 </div>
