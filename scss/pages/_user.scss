@@ -24,8 +24,8 @@
     border-radius: 20px;
 
     @include ab.screen(sm) {
-        gap: 16px;
-        padding: 16px;
+        gap: 20px;
+        padding: 20px;
     }
 
     box-shadow: var(--user-page-main-shadow);

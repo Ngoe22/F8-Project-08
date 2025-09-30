@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="-">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocery Mart | Payment</title>
+
+        <!-- favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="./assets/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./assets/favicon/favicon.svg"
+        />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <!--  -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header.html");
+        </script>
+        <!-- body -->
+
+        <div class="common-page-wrap">
+            <div class="container">
+                <form action="#!" class="user-mod-search-bar">
+                    <input
+                        type="text"
+                        class="user-mod-search-bar__input"
+                        placeholder="Search for item"
+                    />
+                    <button class="user-mod-search-bar__icon"></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="common-page-wrap">
+            <div class="container">
+                <div class="page-path">
+                    <div class="page-path__item">
+                        Home
+                        <img src="./assets/icon/page-path-arrow.svg" alt=" " />
+                    </div>
+                    <div class="page-path__item">
+                        Checkout
+                        <img src="./assets/icon/page-path-arrow.svg" alt=" " />
+                    </div>
+                    <div class="page-path__item">
+                        Shipping
+                        <img src="./assets/icon/page-path-arrow.svg" alt=" " />
+                    </div>
+                    <div class="page-path__item page-path__item--onsite">
+                        Payment Method
+                        <img src="./assets/icon/page-path-arrow.svg" alt=" " />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="common-page-wrap">
+            <div class="container">
+                <div class="row gy-3">
+                    <div class="col col-8 col-lg-12">
+                        <div class="user-main">
+                            <div class="payment__line">
+                                <div class="payment__header">
+                                    1. Shipping, arrives between Mon, May
+                                    16—Tue, May 24
+                                </div>
+
+                                <button
+                                    class="shipping__edit"
+                                    style="align-self: center"
+                                >
+                                    <img
+                                        src="./assets/icon/edit-pen.svg"
+                                        alt=" "
+                                    />
+                                    Edit
+                                </button>
+                            </div>
+                            <div class="payment__shipping-item">
+                                <div class="payment__shipping-info">
+                                    <div class="payment__shipping-title">
+                                        Imran Khan
+                                    </div>
+                                    <div class="payment__shipping-desc">
+                                        Museum of Rajas, Sylhet Sadar, Sylhet
+                                        3100.
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <label class="cm-checkbox">
+                                        <input type="checkbox" hidden />
+                                        <span class="cm-checkbox__box"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="payment__shipping-item">
+                                <div class="payment__shipping-info">
+                                    <div class="payment__shipping-title">
+                                        Items details
+                                    </div>
+                                    <div class="payment__shipping-desc">
+                                        2 items
+                                    </div>
+                                </div>
+                                <a href="#!" class="payment__shipping-link">
+                                    View details
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="user-main common-page-wrap">
+                            <h2 class="payment__header payment__header--border">
+                                2. Shipping method
+                            </h2>
+
+                            <h3 class="payment__header payment__header-sub">
+                                Availeble Shipping method
+                            </h3>
+
+                            <div class="payment__shipping-item">
+                                <div class="payment__shipping-brand">
+                                    <img
+                                        src="./assets/img/shipping/fedex.png"
+                                        alt=" "
+                                        class=""
+                                    />
+                                </div>
+
+                                <div class="payment__line payment__line--wide">
+                                    <div class="payment__shipping-info">
+                                        <div class="payment__shipping-title">
+                                            Fedex Delivery
+                                        </div>
+                                        <div class="payment__shipping-desc">
+                                            Delivery: 2-3 days work
+                                        </div>
+                                    </div>
+
+                                    <div class="payment__check-line">
+                                        <div class="payment__shipping-check">
+                                            Free
+                                        </div>
+                                        <label class="cm-checkbox">
+                                            <input type="checkbox" hidden />
+                                            <span
+                                                class="cm-checkbox__box"
+                                            ></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment__shipping-item">
+                                <div class="payment__shipping-brand">
+                                    <img
+                                        src="./assets/img/shipping/dhl.png"
+                                        alt=" "
+                                        class=""
+                                    />
+                                </div>
+
+                                <div class="payment__line payment__line--wide">
+                                    <div class="payment__shipping-info">
+                                        <div class="payment__shipping-title">
+                                            DHL Delivery
+                                        </div>
+                                        <div class="payment__shipping-desc">
+                                            Delivery: 2-3 days work
+                                        </div>
+                                    </div>
+
+                                    <div class="payment__check-line">
+                                        <div class="payment__shipping-check">
+                                            $ 12.00
+                                        </div>
+                                        <label class="cm-checkbox">
+                                            <input type="checkbox" hidden />
+                                            <span
+                                                class="cm-checkbox__box"
+                                            ></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-4 col-lg-12">
+                        <div class="user-main">
+                            <div class="payment__form-header">
+                                <div class="payment__form-header-title">
+                                    Payment Details
+                                </div>
+                                <div class="payment__form-header-desc">
+                                    Complete your purchase item by providing
+                                    your payment details order.
+                                </div>
+                            </div>
+                            <form class="payment__form">
+                                <div class="user-mod__block">
+                                    <p class="user-mod__label">Email Address</p>
+                                    <input
+                                        type="text"
+                                        class="user-mod__input"
+                                        placeholder="admin@uihut.com"
+                                    />
+                                </div>
+
+                                <div class="user-mod__block">
+                                    <p class="user-mod__label">Card Holder</p>
+                                    <input
+                                        type="text"
+                                        class="user-mod__input"
+                                        placeholder="Imran Khan "
+                                    />
+                                </div>
+
+                                <div class="user-mod__block">
+                                    <p class="user-mod__label">Card Details</p>
+                                    <input
+                                        type="text"
+                                        class="user-mod__input"
+                                        placeholder="928412984***"
+                                    />
+                                </div>
+
+                                <div class="user-mod__block">
+                                    <input
+                                        type="text"
+                                        class="user-mod__input"
+                                        placeholder="MM/YY  |  CVC "
+                                        style="margin-top: 0"
+                                    />
+                                </div>
+                            </form>
+
+                            <div class="side-calc">
+                                <div class="side-calc__line">
+                                    <div class="side-calc__label">
+                                        Subtotal <i>(items)</i>
+                                    </div>
+                                    <div class="side-calc__amount">8</div>
+                                </div>
+                                <div class="side-calc__line">
+                                    <div class="side-calc__label">
+                                        Price <i>(Total)</i>
+                                    </div>
+                                    <div class="side-calc__amount">
+                                        $ 331.90
+                                    </div>
+                                </div>
+                                <div class="side-calc__line">
+                                    <div class="side-calc__label">Shipping</div>
+                                    <div class="side-calc__amount">$ 10.00</div>
+                                </div>
+                                <div class="side-calc__line">
+                                    <div class="side-calc__label">
+                                        Estimated Total
+                                    </div>
+                                    <div class="side-calc__amount">
+                                        $ 341.90
+                                    </div>
+                                </div>
+                            </div>
+                            <button href="#!" class="payment__action-btn">
+                                Pay $ 341.90
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- body -->
+        <footer id="footer" style="margin-top: 100px"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>

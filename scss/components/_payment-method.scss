@@ -1,0 +1,121 @@
+@use "../abstracts" as ab;
+
+.payment {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include ab.screen(md) {
+            gap: 18px;
+        }
+
+        &-header {
+            color: var(--1A162E-to-B9BABE);
+            line-height: 1.45;
+            &-title {
+                color: var(--1A162E-to-B9BABE);
+                font-size: 2.2rem;
+                font-weight: 500;
+                line-height: 1.45;
+            }
+
+            &-desc {
+                margin-top: 5px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px 20px;
+
+        &--wide {
+            flex: 1;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__header {
+        color: var(--1A162E-to-B9BABE);
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.5;
+
+        &-sub {
+            font-size: 1.5rem;
+        }
+
+        &--border {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--D2D1D6-to-292E39);
+        }
+    }
+
+    &__shipping {
+        &-item {
+            padding: 20px;
+            border-radius: 20px;
+            background: var(--F6F6F6-to-B9BABE);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px 20px;
+        }
+
+        &-title {
+            color: var(--1A162E-to-B9BABE);
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.44;
+        }
+
+        &-desc {
+            color: var(--1A162E-to-B9BABE);
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.46;
+        }
+
+        &-check {
+            color: var(--Secondary-Color-Secondary-2, #9e9da8);
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.44;
+        }
+
+        &-link {
+            color: var(--1A162E-to-B9BABE);
+            font-size: 1.5rem;
+        }
+
+        &-brand {
+            align-self: flex-start;
+            width: 70px;
+            height: 60px;
+            //
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+
+    &__check-line {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__action-btn {
+        @include ab.common-btn(12px, 12px, 10px);
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+}
