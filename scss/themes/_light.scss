@@ -128,6 +128,9 @@ html {
 
     // new
     --1A162E-to-B9BABE: #1a162e;
+    --filter-1A162E-to-B9BABE: brightness(0) saturate(100%) invert(9%)
+        sepia(42%) saturate(741%) hue-rotate(210deg) brightness(97%)
+        contrast(100%);
     --D2D1D6-to-292E39: #d2d1d6;
     --linear-7644e1-to-292E39: linear-gradient(
             0deg,
@@ -135,4 +138,5 @@ html {
             rgba(255, 255, 255, 0.9) 100%
         ),
         #7644e1;
+    --9E9DA8-to-292E39: #9e9da8;
 }

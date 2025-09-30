@@ -4,6 +4,7 @@
 
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     &__box {
         $size: 20px;
         width: $size;
@@ -34,3 +35,11 @@
         }
     }
 }
+
+
+// <label class="cm-checkbox">
+//                                             <input type="checkbox" hidden />
+//                                             <span
+//                                                 class="cm-checkbox__box"
+//                                             ></span>
+//                                         </label>

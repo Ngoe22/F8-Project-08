@@ -199,12 +199,13 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.5;
+        align-self: flex-end;
     }
 
     &__bot {
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: center;
     }
 
     &__calc {

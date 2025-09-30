@@ -120,6 +120,10 @@ html.dark {
 
     // new
     --1A162E-to-B9BABE: #b9babe;
+    --filter-1A162E-to-B9BABE: brightness(0) saturate(100%) invert(90%)
+        sepia(3%) saturate(239%) hue-rotate(191deg) brightness(85%)
+        contrast(88%);
     --D2D1D6-to-292E39: #292e39;
     --linear-7644e1-to-292E39: #292e39;
+    --9E9DA8-to-292E39: #292e39;
 }

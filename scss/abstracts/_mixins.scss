@@ -33,4 +33,8 @@ $grid-breakpoints: (
     border-radius: $border-r;
     background-color: #ffb700;
     color: $text-color;
+    transition: 0.5s;
+    &:hover {
+        color: white;
+    }
 }

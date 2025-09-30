@@ -1,3 +1,5 @@
+@use "../abstracts" as ab;
+
 .side-calc {
     display: flex;
     flex-direction: column;
@@ -28,6 +30,14 @@
             }
         }
     }
+
+    &__btn {
+        @include ab.common-btn(18px, 18px, 999px);
+        justify-content: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+    }
 }
 
 .side-promote {
@@ -47,7 +57,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background : var( --linear-7644e1-to-292E39);
+        background: var(--linear-7644e1-to-292E39);
         //
         img {
             width: 70%;
