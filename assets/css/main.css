@@ -1393,6 +1393,14 @@ html {
   --check-out-dark-to-gray-filter: brightness(0) saturate(100%) invert(6%)
       sepia(23%) saturate(4962%) hue-rotate(233deg) brightness(88%)
       contrast(92%);
+  --1A162E-to-B9BABE: #1a162e;
+  --D2D1D6-to-292E39: #d2d1d6;
+  --linear-7644e1-to-292E39: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.9) 0%,
+          rgba(255, 255, 255, 0.9) 100%
+      ),
+      #7644e1;
 }
 
 html.dark {
@@ -1471,12 +1479,17 @@ html.dark {
   --user-mod-btn-bg: #ffb700;
   --check-out-dark-to-gray: #b9babe;
   --check-out-action-text: #9e9da8;
-  --check-out-action-filter: brightness(0) saturate(100%) invert(85%) sepia(1%) saturate(3812%) hue-rotate(213deg) brightness(77%) contrast(79%);
+  --check-out-action-filter: brightness(0) saturate(100%) invert(85%)
+      sepia(1%) saturate(3812%) hue-rotate(213deg) brightness(77%)
+      contrast(79%);
   --check-out-calc-minor-text: #9e9da8;
-  --check-out-D2D1D6-to-292E39: #292E39;
+  --check-out-D2D1D6-to-292E39: #292e39;
   --check-out-dark-to-gray-filter: brightness(0) saturate(100%) invert(87%)
       sepia(0%) saturate(718%) hue-rotate(263deg) brightness(86%)
       contrast(90%);
+  --1A162E-to-B9BABE: #b9babe;
+  --D2D1D6-to-292E39: #292e39;
+  --linear-7644e1-to-292E39: #292e39;
 }
 
 .top-action__btn, .top-action__group, .top-action, .navbar__link > a, .navbar__list, .header__inner {
@@ -2686,14 +2699,26 @@ html.dark {
 }
 .production__price-btn {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
   height: 45px;
-  padding: 0 20%;
+  padding: 0 50px;
   border-radius: 6px;
   background-color: var(--production-cta-bg);
   color: var(--production-price-cta-text);
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44;
+}
+@media (max-width: 1199.8px) {
+  .production__price-btn {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 991.8px) {
+  .production__price-btn {
+    padding: 0 40px;
+  }
 }
 .production__price-fav {
   display: inline-flex;
@@ -2759,7 +2784,7 @@ html.dark {
   filter: var(--icon-color);
 }
 .fav-add.active {
-  filter: none;
+  filter: none !important;
   background-image: url(../icon/heart-red.svg);
 }
 
@@ -3119,7 +3144,7 @@ input:checked ~ .cm-checkbox__box::after {
   gap: 10px;
 }
 
-.check-out__item-delete::before, .check-out__item-save::before, .check-out__item-qty::after, .check-out__item-qty::before, .check-out__item-type::after {
+.check-out__item-delete::before, .check-out__item-qty::after, .check-out__item-qty::before, .check-out__item-type::after {
   content: "";
   display: inline-block;
   width: 25px;
@@ -3258,9 +3283,7 @@ input:checked ~ .cm-checkbox__box::after {
   font-size: 1.6rem;
   border-color: transparent;
 }
-.check-out__item-save::before {
-  background-image: url(../icon/heart.svg);
-  background-size: 70%;
+.check-out__item-save .fav-add {
   filter: var(--check-out-action-filter);
 }
 .check-out__item-delete {
@@ -3314,6 +3337,64 @@ input:checked ~ .cm-checkbox__box::after {
   font-style: normal;
   font-weight: 700;
   line-height: 1.45;
+}
+
+.side-calc {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--1A162E-to-B9BABE);
+}
+.side-calc__label {
+  font-weight: 500;
+}
+.side-calc__label i {
+  font-weight: 400;
+}
+.side-calc__amount {
+  font-weight: 700;
+}
+.side-calc__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.side-calc__line:nth-last-child(1) {
+  padding-top: 13px;
+  border-top: 1px solid var(--D2D1D6-to-292E39);
+}
+.side-calc__line:nth-last-child(1) * {
+  font-weight: 700;
+}
+
+.side-promote {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px 20px;
+  color: var(--1A162E-to-B9BABE);
+  line-height: 1.45;
+}
+.side-promote__icon {
+  width: 80px;
+  height: 80px;
+  grid-row: span 2;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--linear-7644e1-to-292E39);
+}
+.side-promote__icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  object-position: center;
+}
+.side-promote__title {
+  font-weight: 500;
+}
+.side-promote__desc {
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=main.css.map */

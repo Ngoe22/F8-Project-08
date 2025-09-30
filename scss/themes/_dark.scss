@@ -109,10 +109,17 @@ html.dark {
     // check out
     --check-out-dark-to-gray: #b9babe; //
     --check-out-action-text: #9e9da8;
-    --check-out-action-filter: brightness(0) saturate(100%) invert(85%) sepia(1%) saturate(3812%) hue-rotate(213deg) brightness(77%) contrast(79%);
+    --check-out-action-filter: brightness(0) saturate(100%) invert(85%)
+        sepia(1%) saturate(3812%) hue-rotate(213deg) brightness(77%)
+        contrast(79%);
     --check-out-calc-minor-text: #9e9da8;
-    --check-out-D2D1D6-to-292E39: #292E39;
+    --check-out-D2D1D6-to-292E39: #292e39;
     --check-out-dark-to-gray-filter: brightness(0) saturate(100%) invert(87%)
         sepia(0%) saturate(718%) hue-rotate(263deg) brightness(86%)
         contrast(90%);
+
+    // new
+    --1A162E-to-B9BABE: #b9babe;
+    --D2D1D6-to-292E39: #292e39;
+    --linear-7644e1-to-292E39: #292e39;
 }

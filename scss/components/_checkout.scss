@@ -169,10 +169,8 @@
             color: var(--check-out-action-text);
             font-size: 1.6rem;
             border-color: transparent;
-            &::before {
-                @extend %icon-btn;
-                background-image: url(../icon/heart.svg);
-                background-size: 70%;
+
+            .fav-add {
                 filter: var(--check-out-action-filter);
             }
         }
