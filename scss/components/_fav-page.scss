@@ -1,0 +1,25 @@
+@use "../abstracts" as ab;
+
+.fav-page {
+    &__link-btn {
+        @include ab.common-btn(18px, 28px);
+        //
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        align-items: start;
+        gap: 20px;
+
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--D2D1D6-to-292E39);
+    }
+
+    &__bot {
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,22 @@
+$display-breakpoints-for-flex-line: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+);
+
+.f-wrap-none {
+    display: flex;
+    gap: 10px;
+}
+
+@each $point, $size in $display-breakpoints-for-flex-line {
+    @media (max-width: calc($size - 0.02px)) {
+        .f-wrap-#{$point} {
+            display: flex;
+
+            flex-wrap: wrap;
+        }
+    }
+}

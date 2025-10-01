@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="-">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocery Mart | Favorite</title>
+
+        <!-- favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="./assets/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="./assets/favicon/favicon.svg"
+        />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <!--  -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header.html");
+        </script>
+        <!-- body -->
+
+        <div class="common-page-wrap">
+            <div class="container">
+                <form action="#!" class="user-mod-search-bar">
+                    <input
+                        type="text"
+                        class="user-mod-search-bar__input"
+                        placeholder="Search for item"
+                    />
+                    <button class="user-mod-search-bar__icon"></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="common-page-wrap">
+            <div class="container">
+                <div class="page-path">
+                    <div class="page-path__item">
+                        Home
+                        <img src="./assets/icon/page-path-arrow.svg" alt=" " />
+                    </div>
+                    <div class="page-path__item page-path__item--onsite">
+                        Favorite
+                        <img src="./assets/icon/page-path-arrow.svg" alt=" " />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="common-page-wrap">
+            <div class="container">
+                <div class="row gy-3">
+                    <div class="col">
+                        <div class="user-main">
+                            <article class="fav-page__item">
+                                <label class="cm-checkbox">
+                                    <input type="checkbox" hidden />
+                                    <span class="cm-checkbox__box"></span>
+                                </label>
+
+                                <img
+                                    src="./assets/img/product/product-2.png"
+                                    alt=" "
+                                    class="check-out__item-thumb"
+                                />
+                                <div class="check-out__item-content">
+                                    <div class="check-out__item-content-left">
+                                        <p class="check-out__item-title">
+                                            Coffee Beans - Espresso Arabica and
+                                            Robusta Beans
+                                        </p>
+                                        <div class="check-out__item-line">
+                                            <span class="check-out__item-price">
+                                                $47.00 |
+                                            </span>
+                                            <span class="check-out__item-stock">
+                                                In Stock
+                                            </span>
+                                        </div>
+                                        <div class="f-wrap-none f-wrap-lg">
+                                            <label
+                                                for="#!"
+                                                class="check-out__item-type"
+                                            >
+                                                LavAzza
+                                            </label>
+                                            <label
+                                                for="#!"
+                                                class="check-out__item-qty"
+                                            >
+                                                1
+                                            </label>
+
+                                            <div class="f-wrap-none f-wrap-sm">
+                                                <button
+                                                    class="check-out__item-save"
+                                                >
+                                                    <span
+                                                        class="fav-add"
+                                                    ></span>
+                                                    Save
+                                                </button>
+                                                <button
+                                                    class="check-out__item-delete"
+                                                >
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="check-out__item-content-right">
+                                        <div class="check-out__item-total">
+                                            $47.00
+                                        </div>
+
+                                        <a
+                                            href="./checkout.html"
+                                            class="fav-page__link-btn"
+                                        >
+                                            Check-Out
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="fav-page__item">
+                                <label class="cm-checkbox">
+                                    <input type="checkbox" hidden />
+                                    <span class="cm-checkbox__box"></span>
+                                </label>
+
+                                <img
+                                    src="./assets/img/product/product-1.png"
+                                    alt=" "
+                                    class="check-out__item-thumb"
+                                />
+                                <div class="check-out__item-content">
+                                    <div class="check-out__item-content-left">
+                                        <p class="check-out__item-title">
+                                            Coffee Beans - Espresso Arabica and
+                                            Robusta Beans
+                                        </p>
+                                        <div class="check-out__item-line">
+                                            <span class="check-out__item-price">
+                                                $53.00 |
+                                            </span>
+                                            <span class="check-out__item-stock">
+                                                In Stock
+                                            </span>
+                                        </div>
+                                        <div class="f-wrap-none f-wrap-lg">
+                                            <label
+                                                for="#!"
+                                                class="check-out__item-type"
+                                            >
+                                                LavAzza
+                                            </label>
+                                            <label
+                                                for="#!"
+                                                class="check-out__item-qty"
+                                            >
+                                                5
+                                            </label>
+
+                                            <div class="f-wrap-none f-wrap-sm">
+                                                <button
+                                                    class="check-out__item-save"
+                                                >
+                                                    <span
+                                                        class="fav-add"
+                                                    ></span>
+                                                    Save
+                                                </button>
+                                                <button
+                                                    class="check-out__item-delete"
+                                                >
+                                                    Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="check-out__item-content-right">
+                                        <div class="check-out__item-total">
+                                            $265.00
+                                        </div>
+
+                                        <a
+                                            href="./checkout.html"
+                                            class="fav-page__link-btn"
+                                        >
+                                            Check-Out
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <div class="fav-page__bot f-wrap-none f-wrap-md">
+                                <a
+                                    href="./index.html"
+                                    class="check-out__back"
+                                    style="align-self: center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="10"
+                                        height="16"
+                                        viewBox="0 0 10 16"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M8.5 15L1.5 8L8.5 1"
+                                            stroke="currentColor"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Continue Shopping
+                                </a>
+                                <a
+                                    href="./checkout.html"
+                                    class="fav-page__link-btn"
+                                >
+                                    All Check Out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- body -->
+        <footer id="footer" style="margin-top: 100px"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>
