@@ -82,3 +82,15 @@ document.addEventListener("click", function (e) {
         parent.classList.toggle("active");
     }
 });
+
+
+// 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sign = document.querySelector('.sign');
+  const btn = document.querySelector('.mb-sign-toggle');
+
+  btn.addEventListener('click', () => {
+    sign.classList.toggle('active'); 
+  });
+});

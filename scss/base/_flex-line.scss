@@ -9,6 +9,14 @@ $display-breakpoints-for-flex-line: (
 .f-wrap-none {
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+
+.f-spb {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @each $point, $size in $display-breakpoints-for-flex-line {

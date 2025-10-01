@@ -1,0 +1,207 @@
+@use "../abstracts" as ab;
+
+.sign--wrap {
+    overflow: hidden;
+}
+
+.sign {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 0.3s ease;
+
+    @include ab.screen(md) {
+        &.active {
+            transform: translateX(-100%);
+        }
+    }
+
+    &__media {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        background-color: var(--FAFAFD-to-171C28);
+        @include ab.screen(md) {
+            flex-shrink: 0;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        //
+        &-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 442px;
+            gap: 50px;
+        }
+
+        &-img {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &-text {
+            width: 100%;
+            color: var(--1A162E-to-B9BABE);
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.44;
+        }
+    }
+
+    &-right {
+        width: 50%;
+        display: flex;
+        padding: 40px 20px;
+        justify-content: center;
+        background-color: var(--white-to-292E39);
+        //
+        @include ab.screen(md) {
+            flex-shrink: 0;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        max-width: 440px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            margin-top: 50px;
+            color: var(--1A162E-to-B9BABE);
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1.46;
+        }
+
+        &-desc {
+            margin-top: 15px;
+            color: var(--9E9DA8);
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.46;
+        }
+    }
+
+    &__form {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__input-line {
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: 1px solid var(--B9BABE);
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        text-align: left;
+
+        input {
+            width: 80%;
+            color: var(--1A162E-to-D2D1D6);
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        img {
+            filter: var(--filter-B9BABE);
+        }
+    }
+
+    &__form-submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+        transition: 1s;
+        cursor: pointer;
+
+        &.sign-up {
+            margin-top: 45px;
+            background-color: var(--user-mod-btn-bg);
+            color: #1a162e;
+        }
+
+        &.gmail {
+            margin-top: 30px;
+            border: 1px solid var(--B9BABE);
+            color: var(--1A162E-to-B9BABE);
+        }
+    }
+
+    &__form:invalid ~ &__form-submit {
+        user-select: none;
+        pointer-events: none;
+        opacity: 0.4;
+    }
+
+    &__set-default {
+        color: var(--9E9DA8);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+
+    &__link {
+        color: var(--cart-preview-link);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+
+    &__recommend-line {
+        display: flex;
+        padding-top: 15px;
+        margin-top: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        color: var(--9E9DA8);
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.44;
+    }
+}
+
+.ctrl-dots {
+    gap: 15px;
+    &__dot {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: var(--EDEDF6-to-292E39);
+
+        &.active {
+            background-color: var(--B9BABE);
+        }
+    }
+
+    &__img {
+        cursor: pointer;
+        display: block;
+        width: 20px;
+        rotate: 180deg;
+        filter: var(--filter-B9BABE);
+    }
+}
