@@ -1,0 +1,38 @@
+@use "../abstracts" as ab;
+
+.header.for-login {
+    padding: 15px 0;
+    .top-action {
+        display: none;
+    }
+
+    .top-sign {
+        display: flex;
+    }
+}
+
+.top-sign {
+    display: none;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    &-up {
+        @include ab.common-btn(12px, 20px, 5px);
+        background-color: transparent;
+        color: var(--1A162E-to-B9BABE);
+        &:hover {
+            color: var(--1A162E-to-B9BABE);
+            box-shadow: 0 3px 5px 2px var(--9E9DA8-to-292E39);
+        }
+        @include ab.screen(md) {
+            display: none;
+        }
+    }
+
+    &-in {
+        @include ab.common-btn(12px, 25px, 5px);
+        &:hover {
+            box-shadow: 0 3px 5px 2px var(--9E9DA8-to-292E39);
+        }
+    }
+}

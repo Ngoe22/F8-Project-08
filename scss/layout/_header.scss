@@ -120,7 +120,9 @@
     }
 
     &__overlay {
+        display: none;
         @include ab.screen(lg) {
+            display: block;
             position: fixed;
             inset: 0 0 0 0;
             z-index: 9;

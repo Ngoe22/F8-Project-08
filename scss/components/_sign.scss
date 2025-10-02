@@ -1,13 +1,39 @@
 @use "../abstracts" as ab;
 
+@keyframes shake {
+    0% {
+        translate: 0% 0%;
+    }
+
+    10% {
+        translate: 40% 0%;
+    }
+
+    30% {
+        translate: -40% 0%;
+    }
+
+    50% {
+        translate: 20% 0%;
+    }
+
+    70% {
+        translate: -20% 0%;
+    }
+
+    100% {
+        translate: 0% 0%;
+    }
+}
+
 .sign--wrap {
     overflow: hidden;
 }
 
 .sign {
     display: flex;
+    min-height: 100vh;
     width: 100vw;
-    height: 100vh;
     transition: transform 0.3s ease;
 
     @include ab.screen(md) {
@@ -18,7 +44,7 @@
 
     &__media {
         width: 50%;
-        height: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -59,7 +85,7 @@
     &-right {
         width: 50%;
         display: flex;
-        padding: 40px 20px;
+        padding: 40px 30px;
         justify-content: center;
         background-color: var(--white-to-292E39);
         //
@@ -121,6 +147,38 @@
         img {
             filter: var(--filter-B9BABE);
         }
+
+        &.email {
+            position: relative;
+            //
+            &::after {
+                content: "Invalid email";
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 0;
+                translate: 0 -140%;
+                color: rgb(244, 87, 87);
+                font-family: "Gordita", sans-serif;
+                font-weight: 500;
+            }
+
+            //
+
+            &:has(input:invalid:not(:placeholder-shown))::after {
+                display: block;
+            }
+
+            input:invalid:not(:placeholder-shown) ~ img {
+                filter: brightness(0) saturate(100%) invert(46%) sepia(58%)
+                    saturate(4080%) hue-rotate(333deg) brightness(118%)
+                    contrast(94%);
+
+                animation: shake;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+            }
+        }
     }
 
     &__form-submit {
@@ -171,7 +229,7 @@
 
     &__recommend-line {
         display: flex;
-        padding-top: 15px;
+        padding-top: 35px;
         margin-top: auto;
         justify-content: center;
         align-items: center;

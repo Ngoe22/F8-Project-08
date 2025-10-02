@@ -1673,8 +1673,12 @@ html.dark {
     inset: 0 10% 0 0;
   }
 }
+.navbar__overlay {
+  display: none;
+}
 @media (max-width: 991.8px) {
   .navbar__overlay {
+    display: block;
     position: fixed;
     inset: 0 0 0 0;
     z-index: 9;
@@ -3754,14 +3758,34 @@ input:checked ~ .cm-checkbox__box::after {
   justify-content: space-between;
 }
 
+@keyframes shake {
+  0% {
+    translate: 0% 0%;
+  }
+  10% {
+    translate: 40% 0%;
+  }
+  30% {
+    translate: -40% 0%;
+  }
+  50% {
+    translate: 20% 0%;
+  }
+  70% {
+    translate: -20% 0%;
+  }
+  100% {
+    translate: 0% 0%;
+  }
+}
 .sign--wrap {
   overflow: hidden;
 }
 
 .sign {
   display: flex;
+  min-height: 100vh;
   width: 100vw;
-  height: 100vh;
   transition: transform 0.3s ease;
 }
 @media (max-width: 767.8px) {
@@ -3771,7 +3795,6 @@ input:checked ~ .cm-checkbox__box::after {
 }
 .sign__media {
   width: 50%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3809,7 +3832,7 @@ input:checked ~ .cm-checkbox__box::after {
 .sign-right {
   width: 50%;
   display: flex;
-  padding: 40px 20px;
+  padding: 40px 30px;
   justify-content: center;
   background-color: var(--white-to-292E39);
 }
@@ -3864,6 +3887,29 @@ input:checked ~ .cm-checkbox__box::after {
 .sign__input-line img {
   filter: var(--filter-B9BABE);
 }
+.sign__input-line.email {
+  position: relative;
+}
+.sign__input-line.email::after {
+  content: "Invalid email";
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  translate: 0 -140%;
+  color: rgb(244, 87, 87);
+  font-family: "Gordita", sans-serif;
+  font-weight: 500;
+}
+.sign__input-line.email:has(input:invalid:not(:placeholder-shown))::after {
+  display: block;
+}
+.sign__input-line.email input:invalid:not(:placeholder-shown) ~ img {
+  filter: brightness(0) saturate(100%) invert(46%) sepia(58%) saturate(4080%) hue-rotate(333deg) brightness(118%) contrast(94%);
+  animation: shake;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
 .sign__form-submit {
   display: flex;
   justify-content: center;
@@ -3906,7 +3952,7 @@ input:checked ~ .cm-checkbox__box::after {
 }
 .sign__recommend-line {
   display: flex;
-  padding-top: 15px;
+  padding-top: 35px;
   margin-top: auto;
   justify-content: center;
   align-items: center;
@@ -3935,6 +3981,63 @@ input:checked ~ .cm-checkbox__box::after {
   width: 20px;
   rotate: 180deg;
   filter: var(--filter-B9BABE);
+}
+
+.header.for-login {
+  padding: 15px 0;
+}
+.header.for-login .top-action {
+  display: none;
+}
+.header.for-login .top-sign {
+  display: flex;
+}
+
+.top-sign {
+  display: none;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.top-sign-up {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #ffb700;
+  color: #1a162e;
+  transition: 0.5s;
+  background-color: transparent;
+  color: var(--1A162E-to-B9BABE);
+}
+.top-sign-up:hover {
+  color: white;
+}
+.top-sign-up:hover {
+  color: var(--1A162E-to-B9BABE);
+  box-shadow: 0 3px 5px 2px var(--9E9DA8-to-292E39);
+}
+@media (max-width: 767.8px) {
+  .top-sign-up {
+    display: none;
+  }
+}
+.top-sign-in {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  border-radius: 5px;
+  background-color: #ffb700;
+  color: #1a162e;
+  transition: 0.5s;
+}
+.top-sign-in:hover {
+  color: white;
+}
+.top-sign-in:hover {
+  box-shadow: 0 3px 5px 2px var(--9E9DA8-to-292E39);
 }
 
 /*# sourceMappingURL=main.css.map */
