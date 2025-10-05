@@ -44,10 +44,12 @@
             padding-top: 20px;
             z-index: 1;
             @include ab.screen(lg) {
-                inset: 99% 0 auto 30%;
+                position: fixed;
+                inset: 0 30px auto 10%;
             }
             @include ab.screen(md) {
-                inset: 99% 0 auto 20%;
+                position: fixed;
+                inset: 0 15px auto 10%;
             }
         }
         &:hover &-board {
