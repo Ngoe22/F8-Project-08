@@ -83,14 +83,21 @@ document.addEventListener("click", function (e) {
     }
 });
 
-
-// 
+//
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sign = document.querySelector('.sign');
-  const btn = document.querySelector('.mb-sign-toggle');
+    const sign = document.querySelector(".sign");
+    const btn = document.querySelector(".mb-sign-toggle");
 
-  btn.addEventListener('click', () => {
-    sign.classList.toggle('active'); 
-  });
+    btn.addEventListener("click", () => {
+        sign.classList.toggle("active");
+    });
+});
+
+// ////////
+
+document.addEventListener("click", function (e) {
+    if (e.target.closest(".theme-switch")) {
+        document.documentElement.classList.toggle("dark");
+    }
 });

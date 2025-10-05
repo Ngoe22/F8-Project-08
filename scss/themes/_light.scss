@@ -2,11 +2,12 @@ html {
     --main-body-bg: #f6f6f6;
     //
     --text-color: #1a162e;
+    --text-color-blurry: #1a162e3a;
     --icon-color: brightness(0) saturate(100%) invert(10%) sepia(37%)
         saturate(857%) hue-rotate(210deg) brightness(89%) contrast(99%);
     --header-bg-color: #eee;
     --top-action-color: white;
-    --top-action-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.3);
+    --top-action-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.4);
     --top-separator: #ededf6;
     --active-green: #67b044;
 
@@ -150,5 +151,6 @@ html {
     --EDEDF6-to-292E39: #ededf6;
     --FAFAFD-to-171C28: #fafafd;
     --white-to-292E39: white;
-    --1A162E-to-D2D1D6: #1A162E;
+    --1A162E-to-D2D1D6: #1a162e;
+    --ededf6-to-9e9da8: #ededf6;
 }
