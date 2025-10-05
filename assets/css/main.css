@@ -1954,7 +1954,7 @@ html.dark {
 }
 .footer__desc {
   margin-top: 20px;
-  max-width: 600px;
+  max-width: 500px;
   line-height: 1.8;
 }
 .footer__email {
