@@ -84,7 +84,11 @@
                             Let’s create your account and Shop like a pro and
                             save money.
                         </p>
-                        <form action="#!" class="sign__form">
+                        <form
+                            action="./main-page.html"
+                            class="sign__form"
+                            id="sign-up-form"
+                        >
                             <div class="sign__input-line email">
                                 <input
                                     type="email"
@@ -113,7 +117,6 @@
                                 <img
                                     src="./assets/icon/lock.svg"
                                     alt="password"
-                                    
                                 />
                             </div>
                             <div class="f-spb">
@@ -131,13 +134,18 @@
                                 </a>
                             </div>
                         </form>
-                        <a
-                            href="./main-page.html"
+                        <button
                             class="sign__form-submit sign-up"
+                            type="submit"
+                            form="sign-up-form"
                         >
-                            Sign Up
-                        </a>
-                        <a href="./main-page.html" class="sign__form-submit gmail">
+                            Sign up
+                        </button>
+                        <button
+                            class="sign__form-submit gmail"
+                            type="submit"
+                            form="sign-up-form"
+                        >
                             <svg
                                 class="icon-color"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -151,11 +159,13 @@
                                     fill="#1A162E"
                                 />
                             </svg>
-                            Sign in with Gmail
-                        </a>
+                            Sign up with Gmail
+                        </button>
                         <div class="sign__recommend-line">
                             You have an account yet ?
-                            <a href="./sign-in.html" class="sign__link"> Sign In</a>
+                            <a href="./sign-in.html" class="sign__link">
+                                Sign In</a
+                            >
                         </div>
                     </div>
                 </div>

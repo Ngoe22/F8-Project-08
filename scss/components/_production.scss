@@ -163,4 +163,15 @@
             color: var(--production-tabs-active-text);
         }
     }
+
+    // &__tab-contents {
+
+    // }
+    &__tab-content {
+        display: none;
+        //
+        &.active {
+            display: block;
+        }
+    }
 }

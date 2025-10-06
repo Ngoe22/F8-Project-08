@@ -85,7 +85,11 @@
                             you have access to your previously saved all
                             information.
                         </p>
-                        <form action="#!" class="sign__form">
+                        <form
+                            action="./main-page.html"
+                            class="sign__form"
+                            id="sign-in-form"
+                        >
                             <!--  -->
 
                             <!--  -->
@@ -102,11 +106,14 @@
                                 />
                             </div>
                             <div class="sign__input-line">
-                                <input type="password" placeholder="Password" required />
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    required
+                                />
                                 <img
                                     src="./assets/icon/lock.svg"
                                     alt="password"
-                                    
                                 />
                             </div>
 
@@ -125,13 +132,18 @@
                                 </a>
                             </div>
                         </form>
-                        <a
-                            href="./main-page.html"
+                        <button
                             class="sign__form-submit sign-up"
+                            type="submit"
+                            form="sign-in-form"
                         >
-                            Sign Up
-                        </a>
-                        <a href="./main-page.html" class="sign__form-submit gmail">
+                            Sign In
+                        </button>
+                        <button
+                            class="sign__form-submit gmail"
+                            type="submit"
+                            form="sign-in-form"
+                        >
                             <svg
                                 class="icon-color"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +158,7 @@
                                 />
                             </svg>
                             Sign in with Gmail
-                        </a>
+                        </button>
                         <div class="sign__recommend-line">
                             You have an account yet ?
                             <a href="./sign-up.html" class="sign__link">

@@ -33,6 +33,11 @@
 .sign {
     display: flex;
     min-height: 100vh;
+
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
     width: 100vw;
     transition: transform 0.3s ease;
 
@@ -133,8 +138,11 @@
         display: flex;
         justify-content: space-between;
         gap: 10px;
-
         text-align: left;
+
+        &:focus-within {
+            border-color: var(--drop-menu-hover-text);
+        }
 
         input {
             width: 80%;
