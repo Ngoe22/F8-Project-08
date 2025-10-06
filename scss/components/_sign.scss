@@ -145,7 +145,7 @@
         }
 
         input {
-            width: 80%;
+            flex: 1;
             color: var(--1A162E-to-D2D1D6);
             font-size: 1.6rem;
             font-weight: 500;
@@ -154,6 +154,8 @@
 
         img {
             filter: var(--filter-B9BABE);
+            width: 25px;
+            flex-shrink: 0;
         }
 
         &.email {

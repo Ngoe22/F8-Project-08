@@ -45,11 +45,11 @@
             z-index: 1;
             @include ab.screen(lg) {
                 position: fixed;
-                inset: 0 30px auto 10%;
+                inset: 5vh 30px auto 10%;
             }
             @include ab.screen(md) {
                 position: fixed;
-                inset: 0 15px auto 10%;
+                inset: 5vh 15px auto 10%;
             }
         }
         &:hover &-board {

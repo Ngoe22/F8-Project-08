@@ -2463,13 +2463,13 @@ html.dark {
 @media (max-width: 991.8px) {
   .product__filter-board {
     position: fixed;
-    inset: 0 30px auto 10%;
+    inset: 5vh 30px auto 10%;
   }
 }
 @media (max-width: 767.8px) {
   .product__filter-board {
     position: fixed;
-    inset: 0 15px auto 10%;
+    inset: 5vh 15px auto 10%;
   }
 }
 .product__filter:hover .product__filter-board {
@@ -4076,7 +4076,7 @@ input:checked ~ .cm-checkbox__box::after {
   border-color: var(--drop-menu-hover-text);
 }
 .sign__input-line input {
-  width: 80%;
+  flex: 1;
   color: var(--1A162E-to-D2D1D6);
   font-size: 1.6rem;
   font-weight: 500;
@@ -4084,6 +4084,8 @@ input:checked ~ .cm-checkbox__box::after {
 }
 .sign__input-line img {
   filter: var(--filter-B9BABE);
+  width: 25px;
+  flex-shrink: 0;
 }
 .sign__input-line.email {
   position: relative;
@@ -4236,6 +4238,50 @@ input:checked ~ .cm-checkbox__box::after {
 }
 .top-sign-in:hover {
   box-shadow: 0 3px 5px 2px var(--9E9DA8-to-292E39);
+}
+
+.recover__email-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ffb700;
+  color: #1a162e;
+  transition: 0.5s;
+  font-weight: 500;
+  margin-left: 5px;
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.recover__email-submit:hover {
+  color: white;
+}
+input:valid ~ .recover__email-submit {
+  pointer-events: initial;
+  opacity: 1;
+}
+.recover__email {
+  margin-top: 100px;
+}
+.recover__link {
+  display: none;
+}
+.recover__email:has(:checked) + .recover__link {
+  display: block;
+}
+
+.success-roast {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(10, 226, 10, 0.4);
+  background-color: rgba(97, 208, 97, 0.1);
+  color: var(--text-color);
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=main.css.map */
