@@ -4353,7 +4353,12 @@ input:valid ~ .recover__email-submit {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 90%;
+  max-width: 30%;
+}
+@media (max-width: 767.8px) {
+  .text-content img {
+    max-width: 80%;
+  }
 }
 .text-content img + em {
   display: block;
