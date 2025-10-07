@@ -1,0 +1,100 @@
+@use "../abstracts" as ab;
+
+.add-adrs {
+    position: fixed;
+    inset: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    //
+    &__overlay {
+        position: fixed;
+        inset: 0 0 0 0;
+        z-index: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        width: min(80vw, 600px);
+        background-color: var(--header-bg-color);
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    &__header {
+        color: var(--text-color);
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+
+    &__form {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        //
+        .f-wrap-none {
+            gap: 30px;
+        }
+
+        input {
+            color: var(--text-color);
+            display: block;
+            width: 100%;
+            flex-grow: 1;
+            font-weight: 500;
+        }
+    }
+
+    &__input-line {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--filter__option-item-text);
+
+        &:focus {
+            border-color: rgb(255, 183, 0);
+        }
+    }
+
+    &__input-block {
+        text-align: start;
+        height: 100px;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid var(--filter__option-item-text);
+
+        textarea {
+            resize: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:focus-within {
+            border-color: rgb(255, 183, 0);
+        }
+    }
+
+    &__cancel {
+        color: var(--product-filter-text);
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    &__submit {
+        @include ab.common-btn(10px, 20px, 10px);
+        font-weight: 500;
+    }
+
+    //
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    &.active {
+        visibility: visible;
+        opacity: 10;
+    }
+}

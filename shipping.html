@@ -91,13 +91,15 @@
                                             Where should we deliver your order?
                                         </p>
                                     </div>
-                                    <a class="shipping__address-link" href="#!"
-                                        >Add a new address
-                                    </a>
+                                    <button
+                                        class="shipping__address-link add-adrs-switch"
+                                    >
+                                        Add a new address
+                                    </button>
                                 </div>
 
                                 <div class="shipping__line">
-                                    <div class="shipping__info-block">
+                                    <div class="shipping__info-left">
                                         <div class="shipping__check">
                                             <label class="cm-checkbox">
                                                 <input type="checkbox" hidden />
@@ -118,17 +120,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="shipping__edit">
-                                        <img
-                                            src="./assets/icon/edit-pen.svg"
-                                            alt=" "
-                                        />
-                                        Edit
-                                    </button>
+                                    <div class="shipping__info-right">
+                                        <button class="shipping__edit">
+                                            <img
+                                                src="./assets/icon/edit-pen.svg"
+                                                alt=" "
+                                            />
+                                            Edit
+                                        </button>
+                                    </div>
                                 </div>
 
                                 <div class="shipping__line">
-                                    <div class="shipping__info-block">
+                                    <div class="shipping__info-left">
                                         <div class="shipping__check">
                                             <label class="cm-checkbox">
                                                 <input type="checkbox" hidden />
@@ -150,13 +154,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="shipping__edit">
-                                        <img
-                                            src="./assets/icon/edit-pen.svg"
-                                            alt=" "
-                                        />
-                                        Edit
-                                    </button>
+                                    <div class="shipping__info-right">
+                                        <button class="shipping__edit">
+                                            <img
+                                                src="./assets/icon/edit-pen.svg"
+                                                alt=" "
+                                            />
+                                            Edit
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <p class="shipping__item-title">Items details</p>
@@ -438,6 +444,52 @@
             </div>
         </div>
 
+        <!-- modal -->
+
+        <div class="add-adrs">
+            <div class="add-adrs__overlay add-adrs-switch"></div>
+            <article class="add-adrs__content">
+                <h3 class="add-adrs__header">Add your address</h3>
+                <form action="#!" class="add-adrs__form">
+                    <div class="f-wrap-none">
+                        <input
+                            type="text"
+                            placeholder="Name"
+                            class="add-adrs__input-line"
+                        />
+
+                        <input
+                            type="text"
+                            placeholder="Phone number"
+                            class="add-adrs__input-line"
+                        />
+                    </div>
+
+                    <input
+                        type="text"
+                        placeholder="Address"
+                        class="add-adrs__input-line"
+                    />
+                    <div class="add-adrs__input-block">
+                        <textarea placeholder="Note" name="" id=""></textarea>
+                    </div>
+                </form>
+                <div class="f-wrap-none f-wrap-sm">
+                    <label class="cm-checkbox">
+                        <input type="checkbox" hidden />
+                        <span class="cm-checkbox__box"></span>
+                        Set as default
+                    </label>
+
+                    <button class="add-adrs__cancel add-adrs-switch">
+                        Cancel
+                    </button>
+                    <button class="add-adrs__submit add-adrs-switch">
+                        Save
+                    </button>
+                </div>
+            </article>
+        </div>
         <!-- body -->
         <footer id="footer" class="footer"></footer>
         <script>

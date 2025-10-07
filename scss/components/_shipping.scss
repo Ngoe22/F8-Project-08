@@ -51,7 +51,7 @@
         }
     }
 
-    &__info-block {
+    &__info-left {
         width: 80%;
         display: grid;
         grid-template-columns: auto 1fr;
@@ -81,7 +81,9 @@
         font-size: 1.4rem;
         display: flex;
         align-items: center;
-        gap: 30px;
+        flex-wrap: wrap;
+        gap: 5px 30px;
+        
         //
         > * {
             display: flex;
@@ -90,9 +92,14 @@
         }
     }
 
+    &__info-right {
+        align-self: stretch;
+        display: flex;
+        align-items: end;
+    }
+
     &__edit {
         color: var(--text-color);
-        align-self: flex-end;
         font-size: 1.8rem;
         display: flex;
         align-items: center;
