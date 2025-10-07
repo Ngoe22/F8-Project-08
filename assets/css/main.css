@@ -2840,6 +2840,8 @@ html.dark {
   padding: 25px;
   border-radius: 16px;
   background-color: var(--review-item-bg);
+  display: flex;
+  flex-direction: column;
 }
 .review__content {
   display: grid;
@@ -2862,7 +2864,8 @@ html.dark {
   line-height: 1.5;
 }
 .review__rate {
-  margin-top: 20px;
+  padding-top: 20px;
+  margin-top: auto;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -2994,12 +2997,26 @@ html.dark {
   row-gap: 10px;
   flex-wrap: wrap;
 }
+@media (max-width: 991.8px) {
+  .production__tabs {
+    column-gap: 20px;
+  }
+}
 .production__tab {
   flex-shrink: 0;
   color: var(--production-tabs-text);
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.45;
+  user-select: none;
+  cursor: pointer;
+}
+.production__tab-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 500;
 }
 .production__tab.active {
   color: var(--production-tabs-active-text);
@@ -3009,6 +3026,9 @@ html.dark {
 }
 .production__tab-content.active {
   display: block;
+}
+.production__tab-section {
+  margin-top: 30px;
 }
 
 .page-path {
@@ -4282,6 +4302,81 @@ input:valid ~ .recover__email-submit {
   text-align: left;
   font-weight: 500;
   line-height: 1.5;
+}
+
+.text-content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6 {
+  font-weight: 600;
+}
+.text-content h1 {
+  font-size: 2.6rem;
+}
+.text-content h2 {
+  font-size: 2.2rem;
+}
+.text-content h3 {
+  font-size: 1.8rem;
+}
+.text-content h4 {
+  font-size: 1.6rem;
+}
+.text-content h5 {
+  font-size: 1.4rem;
+}
+.text-content h6 {
+  font-size: 1.2rem;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6,
+.text-content p,
+.text-content blockquote,
+.text-content img,
+.text-content figure,
+.text-content ul,
+.text-content ol,
+.text-content table {
+  margin: 20px 0;
+}
+.text-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+.text-content img + em {
+  display: block;
+  font-style: italic;
+  text-align: center;
+}
+.text-content a {
+  color: #0071dc;
+  text-decoration: underline;
+}
+.text-content blockquote {
+  background: rgba(119, 218, 230, 0.1);
+  padding: 20px;
+  border-left: 3px solid #77dae6;
+}
+.text-content blockquote p {
+  margin: 0;
+}
+.text-content hr {
+  border: none;
+  height: 1px;
+  margin: 40px 0;
+  background: var(--text-content-hr-bg);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -101,3 +101,28 @@ document.addEventListener("click", function (e) {
         document.documentElement.classList.toggle("dark");
     }
 });
+
+// production tab
+const $$ = (selector) => document.querySelectorAll(selector);
+
+window.addEventListener("template-loaded", () => {
+    const tabContainers = $$(".js-tabs");
+
+    tabContainers.forEach((tabContainer) => {
+        const tabs = tabContainer.querySelectorAll(".production__tab");
+        const contents = tabContainer.querySelectorAll(".production__tab-content");
+
+        tabs.forEach((tab, index) => {
+            tab.onclick = () => {
+                // Remove active from previous
+                tabContainer.querySelector(".production__tab.active")?.classList.remove("active");
+                tabContainer.querySelector(".production__tab-content.active")?.classList.remove("active");
+
+                // Add active to current
+                tab.classList.add("active");
+                contents[index].classList.add("active");
+            };
+        });
+    });
+});
+

@@ -13,6 +13,8 @@
         padding: 25px;
         border-radius: 16px;
         background-color: var(--review-item-bg);
+        display: flex;
+        flex-direction: column;
     }
 
     &__content {
@@ -40,8 +42,8 @@
     }
 
     &__rate {
-        margin-top: 20px;
-
+        padding-top: 20px;
+        margin-top: auto;
         display: flex;
         align-items: center;
         gap: 20px;
