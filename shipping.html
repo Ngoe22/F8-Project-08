@@ -452,35 +452,97 @@
                 <h3 class="add-adrs__header">Add your address</h3>
                 <form action="#!" class="add-adrs__form">
                     <div class="f-wrap-none">
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            class="add-adrs__input-line"
-                        />
-
-                        <input
-                            type="text"
-                            placeholder="Phone number"
-                            class="add-adrs__input-line"
-                        />
+                        <label class="add-adrs__label">
+                            <div class="add-adrs__label-text">Name</div>
+                            <input
+                                type="text"
+                                placeholder=""
+                                class="add-adrs__input-line"
+                                name="name"
+                            />
+                        </label>
+                        <!--  -->
+                        <label class="add-adrs__label">
+                            <div class="add-adrs__label-text">Phone</div>
+                            <input
+                                type="tel"
+                                minlength="10"
+                                placeholder=""
+                                class="add-adrs__input-line"
+                                name="phone-number"
+                            />
+                        </label>
                     </div>
 
-                    <input
-                        type="text"
-                        placeholder="Address"
-                        class="add-adrs__input-line"
-                    />
-                    <div class="add-adrs__input-block">
-                        <textarea placeholder="Note" name="" id=""></textarea>
-                    </div>
-                </form>
-                <div class="f-wrap-none f-wrap-sm">
-                    <label class="cm-checkbox">
+                    <label class="add-adrs__label add-adrs__option">
+                        <div class="add-adrs__label-text">Address</div>
+                        <input
+                            type="text"
+                            placeholder="Country / City / Street"
+                            class="add-adrs__input-line"
+                            name="address"
+                        />
+                        <div class="add-adrs__option-card">
+                            <div class="add-adrs__option-header">
+                                <span>Country / City / Street</span>
+                                <img
+                                    src="./assets/icon/X.svg"
+                                    alt="X"
+                                    class="icon-color"
+                                />
+                            </div>
+                            <div class="add-adrs__option-search">
+                                <input type="text" autocomplete="none" />
+                                <img
+                                    src="./assets/icon/search.svg"
+                                    alt=""
+                                    class="icon-color"
+                                />
+                            </div>
+                            <ul class="add-adrs__option-list">
+                                <li class="add-adrs__option-item">Ha noi</li>
+                                <li class="add-adrs__option-item active">
+                                    Ha long
+                                </li>
+                                <li class="add-adrs__option-item">Thanh Hoa</li>
+                                <li class="add-adrs__option-item">Da nang</li>
+                                <li class="add-adrs__option-item">Sapa</li>
+                                <li class="add-adrs__option-item">Sai gon</li>
+
+                                <li class="add-adrs__option-item">Thanh Hoa</li>
+                                <li class="add-adrs__option-item">Da nang</li>
+                                <li class="add-adrs__option-item">Sapa</li>
+                                <li class="add-adrs__option-item">Sai gon</li>
+
+                                <li class="add-adrs__option-item">Thanh Hoa</li>
+                                <li class="add-adrs__option-item">Da nang</li>
+                                <li class="add-adrs__option-item">Sapa</li>
+                                <li class="add-adrs__option-item">Sai gon</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label class="add-adrs__label">
+                        <div class="add-adrs__label-text">Description</div>
+                        <div class="add-adrs__input-block">
+                            <textarea
+                                placeholder="..."
+                                id=""
+                                name="description"
+                            ></textarea>
+                        </div>
+                    </label>
+                    <label class="cm-checkbox adrs__checkbox">
                         <input type="checkbox" hidden />
                         <span class="cm-checkbox__box"></span>
                         Set as default
                     </label>
-
+                    <!-- 
+                     -->
+                    <!-- <button type="submit" class="add-adrs__submit">
+                        Save testing
+                    </button> -->
+                </form>
+                <div class="f-wrap-none f-wrap-sm">
                     <button class="add-adrs__cancel add-adrs-switch">
                         Cancel
                     </button>

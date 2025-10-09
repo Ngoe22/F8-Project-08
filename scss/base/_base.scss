@@ -2,6 +2,18 @@
 ::before,
 ::after {
     box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+       background: transparent;
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--drop-menu-separator--thumb);
+        border-radius: 8px;
+    }
 }
 
 html {
