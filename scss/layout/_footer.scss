@@ -130,6 +130,9 @@
     input {
         flex-grow: 1;
         color: var(--text-color);
+        @include ab.screen(sm) {
+            max-width: 100px;
+        }
     }
 
     &__btn {

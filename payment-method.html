@@ -110,7 +110,7 @@
                                 </div>
                                 <div class="">
                                     <label class="cm-checkbox">
-                                        <input type="checkbox" hidden />
+                                        <input type="checkbox" hidden checked/>
                                         <span class="cm-checkbox__box"></span>
                                     </label>
                                 </div>
@@ -159,17 +159,19 @@
                                         </div>
                                     </div>
 
-                                    <div class="payment__check-line">
-                                        <div class="payment__shipping-check">
+                                    <label
+                                        class="cm-checkbox payment__ship-method-check"
+                                    >
+                                        <input
+                                            type="radio"
+                                            hidden
+                                            name="ship-method"
+                                        />
+                                        <span class="cm-checkbox__box"></span>
+                                        <div class="payment__ship-method-check-text">
                                             Free
                                         </div>
-                                        <label class="cm-checkbox">
-                                            <input type="checkbox" hidden />
-                                            <span
-                                                class="cm-checkbox__box"
-                                            ></span>
-                                        </label>
-                                    </div>
+                                    </label>
                                 </div>
                             </div>
 
@@ -192,17 +194,19 @@
                                         </div>
                                     </div>
 
-                                    <div class="payment__check-line">
-                                        <div class="payment__shipping-check">
+                                    <label
+                                        class="cm-checkbox payment__ship-method-check"
+                                    >
+                                        <input
+                                            type="radio"
+                                            hidden
+                                            name="ship-method"
+                                        />
+                                        <span class="cm-checkbox__box"></span>
+                                        <div class="payment__ship-method-check-text">
                                             $ 12.00
                                         </div>
-                                        <label class="cm-checkbox">
-                                            <input type="checkbox" hidden />
-                                            <span
-                                                class="cm-checkbox__box"
-                                            ></span>
-                                        </label>
-                                    </div>
+                                    </label>
                                 </div>
                             </div>
                         </div>

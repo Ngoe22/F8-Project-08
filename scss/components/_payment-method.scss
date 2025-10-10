@@ -81,16 +81,11 @@
             line-height: 1.46;
         }
 
-        &-check {
-            color: var(--Secondary-Color-Secondary-2, #9e9da8);
-            font-size: 1.8rem;
-            font-weight: 500;
-            line-height: 1.44;
-        }
-
         &-link {
             color: var(--cart-preview-link);
             font-size: 1.5rem;
+            text-decoration: underline;
+            text-underline-offset: 5px;
         }
 
         &-brand {
@@ -107,10 +102,19 @@
         }
     }
 
-    &__check-line {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    &__ship-method-check-text {
+        color: var(--Secondary-Color-Secondary-2, #9e9da8);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__ship-method-check {
+        flex-direction: row-reverse;
+
+        input:checked ~ &-text {
+            color: var(--text-color)
+        }
     }
 
     &__action-btn {

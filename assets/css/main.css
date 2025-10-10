@@ -1998,6 +1998,11 @@ html.dark {
   flex-grow: 1;
   color: var(--text-color);
 }
+@media (max-width: 575.8px) {
+  .email-submit input {
+    max-width: 100px;
+  }
+}
 .email-submit__btn {
   display: inline-flex;
   align-items: center;
@@ -3147,7 +3152,6 @@ html.dark {
 .user-nav__list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   color: var(--user-nav-list-text);
 }
 .user-nav__list-title {
@@ -3162,6 +3166,12 @@ html.dark {
   gap: 10px;
   font-size: 1.5rem;
   line-height: 1.46;
+  padding: 6px 0;
+  transition: 0.5s;
+}
+.user-nav__item:hover {
+  color: var(--drop-menu-hover-text);
+  translate: 5px;
 }
 .user-nav__item-icon {
   width: 20px;
@@ -3171,11 +3181,6 @@ html.dark {
 }
 .user-nav__item-label {
   flex: 1;
-  transition: 0.5s;
-}
-.user-nav__item-label:hover {
-  color: var(--drop-menu-hover-text);
-  translate: 5px;
 }
 
 .user-card {
@@ -3427,6 +3432,7 @@ html.dark {
   flex-shrink: 0;
   gap: 10px;
   color: var(--text-color);
+  user-select: none;
 }
 .cm-checkbox__box {
   flex-shrink: 0;
@@ -3929,15 +3935,11 @@ input:checked ~ .cm-checkbox__box::after {
   font-weight: 400;
   line-height: 1.46;
 }
-.payment__shipping-check {
-  color: var(--Secondary-Color-Secondary-2, #9e9da8);
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.44;
-}
 .payment__shipping-link {
   color: var(--cart-preview-link);
   font-size: 1.5rem;
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 .payment__shipping-brand {
   align-self: flex-start;
@@ -3950,10 +3952,17 @@ input:checked ~ .cm-checkbox__box::after {
   object-fit: contain;
   object-position: center;
 }
-.payment__check-line {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.payment__ship-method-check-text {
+  color: var(--Secondary-Color-Secondary-2, #9e9da8);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.payment__ship-method-check {
+  flex-direction: row-reverse;
+}
+input:checked ~ .payment__ship-method-check-text {
+  color: var(--text-color);
 }
 .payment__action-btn {
   display: inline-flex;
